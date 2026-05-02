@@ -780,7 +780,7 @@
   // ─────────────────────────────────────────────
   // CONFIG
   // ─────────────────────────────────────────────
-  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyq2D5r8EcsF5JSg6_BukxwKnxc01pcWoZpKz-vo98tt7KCq1eVqX9kJAlBr-H-MNMt/exec';
+  const SHEET_URL = https://script.google.com/macros/s/AKfycbyEoG_7b8ayKdmPIqrrkHknpe_9QgPhD_0RRMsMhUyWoC_vqrjTlXfg8DYZ2ZiKB0ou/exec
   const TOTAL_SPOTS = 500;
 
   // ─────────────────────────────────────────────
@@ -793,24 +793,13 @@
   const votes = { 'Embered Path': 34, 'Slait': 28, 'Ignis': 19, 'Kova': 16, 'Velo': 12, 'Nudge': 8 };
 
   // ─────────────────────────────────────────────
-  // CORE SUBMIT — sends email + vote to Google Sheet via no-cors fetch
+  // CORE SUBMIT — sends to Google Sheet via no-cors fetch
   // ─────────────────────────────────────────────
-  function sendToSheet(email, poll_vote, source) {
-    const url = SHEET_URL
-      + '?action=submit'
-      + '&email=' + encodeURIComponent(email)
-      + '&poll_vote=' + encodeURIComponent(poll_vote || '')
-      + '&source=' + encodeURIComponent(source || 'landing_page');
-
-    // Use no-cors fetch — we won't get a response body but the sheet write fires
-    fetch(url, { method: 'GET', mode: 'no-cors' }).catch(function() {});
-
-    // Also fire JSONP as backup
-    const script = document.createElement('script');
-    const cbName = 'cb_' + Date.now();
-    window[cbName] = function() { try { delete window[cbName]; } catch(e) {} };
-    script.src = url + '&callback=' + cbName;
-    document.head.appendChild(script);
+  function sendToSheet(params) {
+    const qs = Object.keys(params).map(function(k) {
+      return k + '=' + encodeURIComponent(params[k]);
+    }).join('&');
+    fetch(SHEET_URL + '?' + qs, { method: 'GET', mode: 'no-cors' }).catch(function() {});
   }
 
   // ─────────────────────────────────────────────
@@ -854,10 +843,10 @@
   }
 
   // ─────────────────────────────────────────────
-  // EMAIL SUBMIT
+  // EMAIL SUBMIT — single fire guard prevents double submission
   // ─────────────────────────────────────────────
-  // EMAIL SUBMIT
-  // ─────────────────────────────────────────────
+  let emailCaptured = false;
+
   function submitHeroEmail() {
     const input = document.getElementById('hero-email-input');
     const err   = document.getElementById('hero-email-error');
@@ -871,17 +860,12 @@
       return;
     }
 
+    if (emailCaptured) return;
+    emailCaptured = true;
     userEmail = email;
-    document.getElementById('email-input').value = email;
 
-    // Send to sheet
-    sendToSheet(email, '', 'hero');
+    sendToSheet({ action: 'submit', email: email, poll_vote: '', source: 'hero' });
 
-    // Show success immediately — no-cors means we can't wait for response
-    onHeroEmailSuccess();
-  }
-
-  function onHeroEmailSuccess() {
     document.getElementById('hero-email-wrap').style.display = 'none';
     document.getElementById('hero-email-success').style.display = 'block';
     document.getElementById('email-form-wrap').style.display = 'none';
@@ -902,16 +886,15 @@
       return;
     }
 
+    if (emailCaptured) return;
+    emailCaptured = true;
     userEmail = email;
     btn.disabled = true;
     btn.textContent = 'Saving...';
 
-    // Send to sheet
-    sendToSheet(email, '', 'landing_page');
+    sendToSheet({ action: 'submit', email: email, poll_vote: '', source: 'landing_page' });
 
-    // Show success after short delay
     setTimeout(function() {
-      btn.textContent = 'Claimed →';
       document.getElementById('email-form-wrap').style.display = 'none';
       document.getElementById('email-success').style.display = 'block';
     }, 800);
@@ -946,8 +929,8 @@
     const finalName = selectedName;
     votes[finalName] = (votes[finalName] || 0) + 1;
 
-    // Write vote to sheet
-    sendToSheet(userEmail || 'anonymous', finalName, 'poll');
+    // Update the existing row with the poll vote — matches by email
+    sendToSheet({ action: 'updateVote', email: userEmail || 'anonymous', poll_vote: finalName });
 
     showPollResults();
   }
