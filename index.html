@@ -778,20 +778,40 @@
 
 <script>
   // ─────────────────────────────────────────────
-  // CONFIG — paste your Google Apps Script URL here after deploying
+  // CONFIG
   // ─────────────────────────────────────────────
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyVSA_Ov1J9am2y-YWgNHYnNePXoZJVUTZLNCLKpF8YYcE2n1DgHQPSjJuXyiLiS6IU/exec';
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyq2D5r8EcsF5JSg6_BukxwKnxc01pcWoZpKz-vo98tt7KCq1eVqX9kJAlBr-H-MNMt/exec';
   const TOTAL_SPOTS = 500;
 
   // ─────────────────────────────────────────────
   // STATE
   // ─────────────────────────────────────────────
-  let claimedCount = 117; // updated from sheet on load
   let selectedName = null;
   let userEmail = '';
 
   // Seeded votes for display (poll results shown after voting)
   const votes = { 'Embered Path': 34, 'Slait': 28, 'Ignis': 19, 'Kova': 16, 'Velo': 12, 'Nudge': 8 };
+
+  // ─────────────────────────────────────────────
+  // CORE SUBMIT — sends email + vote to Google Sheet via no-cors fetch
+  // ─────────────────────────────────────────────
+  function sendToSheet(email, poll_vote, source) {
+    const url = SHEET_URL
+      + '?action=submit'
+      + '&email=' + encodeURIComponent(email)
+      + '&poll_vote=' + encodeURIComponent(poll_vote || '')
+      + '&source=' + encodeURIComponent(source || 'landing_page');
+
+    // Use no-cors fetch — we won't get a response body but the sheet write fires
+    fetch(url, { method: 'GET', mode: 'no-cors' }).catch(function() {});
+
+    // Also fire JSONP as backup
+    const script = document.createElement('script');
+    const cbName = 'cb_' + Date.now();
+    window[cbName] = function() { try { delete window[cbName]; } catch(e) {} };
+    script.src = url + '&callback=' + cbName;
+    document.head.appendChild(script);
+  }
 
   // ─────────────────────────────────────────────
   // CALCULATOR
@@ -836,6 +856,8 @@ const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyVSA_Ov1J9am2y-YWgNH
   // ─────────────────────────────────────────────
   // EMAIL SUBMIT
   // ─────────────────────────────────────────────
+  // EMAIL SUBMIT
+  // ─────────────────────────────────────────────
   function submitHeroEmail() {
     const input = document.getElementById('hero-email-input');
     const err   = document.getElementById('hero-email-error');
@@ -850,37 +872,22 @@ const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyVSA_Ov1J9am2y-YWgNH
     }
 
     userEmail = email;
-
-    // Mirror email into the main form below so they don't have to type it again
     document.getElementById('email-input').value = email;
 
-    if (SHEET_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-      onHeroEmailSuccess({});
-      return;
-    }
+    // Send to sheet
+    sendToSheet(email, '', 'hero');
 
-    const script = document.createElement('script');
-    script.src = SHEET_URL
-      + '?action=submit'
-      + '&email=' + encodeURIComponent(email)
-      + '&poll_vote='
-      + '&source=hero'
-      + '&callback=onHeroEmailSuccess';
-    document.head.appendChild(script);
-
-    setTimeout(function() {
-      if (document.getElementById('hero-email-wrap').style.display !== 'none') {
-        onHeroEmailSuccess({});
-      }
-    }, 4000);
+    // Show success immediately — no-cors means we can't wait for response
+    onHeroEmailSuccess();
   }
 
-  window.onHeroEmailSuccess = function(data) {
+  function onHeroEmailSuccess() {
     document.getElementById('hero-email-wrap').style.display = 'none';
     document.getElementById('hero-email-success').style.display = 'block';
     document.getElementById('email-form-wrap').style.display = 'none';
     document.getElementById('email-success').style.display = 'block';
-  };
+  }
+
   function submitEmail() {
     const input = document.getElementById('email-input');
     const btn   = document.getElementById('submit-btn');
@@ -899,34 +906,16 @@ const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyVSA_Ov1J9am2y-YWgNH
     btn.disabled = true;
     btn.textContent = 'Saving...';
 
-    if (SHEET_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-      // Demo mode — no real submission
-      onEmailSuccess({ count: claimedCount + 1 });
-      return;
-    }
+    // Send to sheet
+    sendToSheet(email, '', 'landing_page');
 
-    // JSONP submission to Google Apps Script
-    const script = document.createElement('script');
-    script.src = SHEET_URL
-      + '?action=submit'
-      + '&email=' + encodeURIComponent(email)
-      + '&poll_vote='
-      + '&source=landing_page'
-      + '&callback=onEmailSuccess';
-    document.head.appendChild(script);
-
-    // Fallback timeout in case JSONP fails
+    // Show success after short delay
     setTimeout(function() {
-      if (btn.disabled && btn.textContent === 'Saving...') {
-        onEmailSuccess({});
-      }
-    }, 4000);
+      btn.textContent = 'Claimed →';
+      document.getElementById('email-form-wrap').style.display = 'none';
+      document.getElementById('email-success').style.display = 'block';
+    }, 800);
   }
-
-  window.onEmailSuccess = function(data) {
-    document.getElementById('email-form-wrap').style.display = 'none';
-    document.getElementById('email-success').style.display = 'block';
-  };
 
   // ─────────────────────────────────────────────
   // POLL
@@ -957,22 +946,11 @@ const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyVSA_Ov1J9am2y-YWgNH
     const finalName = selectedName;
     votes[finalName] = (votes[finalName] || 0) + 1;
 
-    // Write vote back to sheet
-    if (SHEET_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-      const script = document.createElement('script');
-      script.src = SHEET_URL
-        + '?action=submit'
-        + '&email=' + encodeURIComponent(userEmail || '')
-        + '&poll_vote=' + encodeURIComponent(finalName)
-        + '&source=poll'
-        + '&callback=onPollSaved';
-      document.head.appendChild(script);
-    }
+    // Write vote to sheet
+    sendToSheet(userEmail || 'anonymous', finalName, 'poll');
 
     showPollResults();
   }
-
-  window.onPollSaved = function() {};
 
   function showPollResults() {
     const total  = Object.values(votes).reduce(function(a, b) { return a + b; }, 0);
