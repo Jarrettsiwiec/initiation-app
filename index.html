@@ -441,25 +441,30 @@
   .poll-results { display: none; }
   .poll-results.visible { display: block; }
 
-  .result-bar-wrap { margin-bottom: 14px; }
+  .result-bar-wrap { margin-bottom: 16px; }
 
   .result-bar-header {
     display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px;
   }
 
   .result-bar-name { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); }
-  .result-bar-pct { color: var(--ink3); font-size: 13px; }
+  .result-bar-pct { color: var(--ink3); font-size: 13px; font-weight: 500; }
   .result-bar-winner .result-bar-name { color: var(--accent); }
   .result-bar-winner .result-bar-pct { color: var(--accent); font-weight: 500; }
 
-  .result-bar-track { height: 6px; background: var(--paper3); border-radius: 3px; overflow: hidden; }
+  .result-bar-track { height: 8px; background: var(--paper3); border-radius: 4px; overflow: hidden; }
 
   .result-bar-fill {
-    height: 100%; border-radius: 3px; background: var(--paper3);
-    transition: width 1s cubic-bezier(.4,0,.2,1);
+    height: 100%; border-radius: 4px;
+    transition: width 1.2s cubic-bezier(.4,0,.2,1), background .3s;
   }
 
-  .result-bar-winner .result-bar-fill { background: var(--accent); }
+  .result-bar-your-vote .result-bar-name::after {
+    content: ' — your pick';
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; font-style: italic;
+    color: var(--ink3); margin-left: 6px;
+  }
 
   .poll-thanks {
     font-size: 13px; color: var(--ink3); margin-top: 20px;
@@ -789,8 +794,9 @@
   let selectedName = null;
   let userEmail = '';
 
-  // Seeded votes for display (poll results shown after voting)
-  const votes = { 'Embered Path': 34, 'Slait': 28, 'Ignis': 19, 'Kova': 16, 'Velo': 12, 'Nudge': 8 };
+  // Seeded votes — results hidden until user votes
+  const PRESET_NAMES = ['Embered Path', 'Slait', 'Ignis', 'Kova', 'Velo', 'Nudge'];
+  const votes = { 'Embered Path': 34, 'Slait': 28, 'Ignis': 19, 'Kova': 16, 'Velo': 12, 'Nudge': 8, 'Other': 5 };
 
   // ─────────────────────────────────────────────
   // CORE SUBMIT — sends to Google Sheet via no-cors fetch
@@ -924,38 +930,53 @@
   function submitPoll() {
     if (!selectedName) return;
 
-    // If they selected "own" but didn't type anything, prompt them
     if (selectedName === '__own__') {
       document.getElementById('own-idea-input').focus();
       return;
     }
 
     const finalName = selectedName;
-    votes[finalName] = (votes[finalName] || 0) + 1;
 
-    // Update the existing row with the poll vote — matches by email
+    // Bucket custom names as "Other" for display, but send real name to sheet
+    const displayName = PRESET_NAMES.indexOf(finalName) >= 0 ? finalName : 'Other';
+    votes[displayName] = (votes[displayName] || 0) + 1;
+
     sendToSheet({ action: 'updateVote', email: userEmail || 'anonymous', poll_vote: finalName });
 
-    showPollResults();
+    showPollResults(displayName);
   }
 
-  function showPollResults() {
+  function getBarColor(pct, isWinner) {
+    // Color scales from warm grey → deep accent based on vote share
+    if (isWinner) return '#c84b2f'; // accent — winner always full red
+    if (pct >= 20) return '#d4735a';
+    if (pct >= 12) return '#dfa08c';
+    if (pct >= 6)  return '#e8c4b8';
+    return '#e0dbd2'; // paper3 — very low share
+  }
+
+  function showPollResults(userVote) {
     const total  = Object.values(votes).reduce(function(a, b) { return a + b; }, 0);
     const sorted = Object.entries(votes).sort(function(a, b) { return b[1] - a[1]; });
     const winner = sorted[0][0];
 
     const barsHtml = sorted.map(function(entry) {
-      const name  = entry[0];
-      const count = entry[1];
-      const pct   = Math.round((count / total) * 100);
-      const isWin = name === winner;
-      return '<div class="result-bar-wrap' + (isWin ? ' result-bar-winner' : '') + '">'
+      const name    = entry[0];
+      const count   = entry[1];
+      const pct     = Math.round((count / total) * 100);
+      const isWin   = name === winner;
+      const isYours = name === userVote;
+      const color   = getBarColor(pct, isWin);
+
+      return '<div class="result-bar-wrap'
+        + (isWin ? ' result-bar-winner' : '')
+        + (isYours ? ' result-bar-your-vote' : '') + '">'
         + '<div class="result-bar-header">'
         + '<span class="result-bar-name">' + name + (isWin ? ' ✦' : '') + '</span>'
         + '<span class="result-bar-pct">' + pct + '%</span>'
         + '</div>'
         + '<div class="result-bar-track">'
-        + '<div class="result-bar-fill" style="width:0%" data-width="' + pct + '%"></div>'
+        + '<div class="result-bar-fill" style="width:0%;background:' + color + '" data-width="' + pct + '%" data-color="' + color + '"></div>'
         + '</div></div>';
     }).join('');
 
@@ -967,6 +988,7 @@
     setTimeout(function() {
       document.querySelectorAll('.result-bar-fill').forEach(function(bar) {
         bar.style.width = bar.dataset.width;
+        bar.style.background = bar.dataset.color;
       });
     }, 100);
   }
