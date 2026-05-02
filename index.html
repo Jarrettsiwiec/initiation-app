@@ -780,7 +780,7 @@
   // ─────────────────────────────────────────────
   // CONFIG
   // ─────────────────────────────────────────────
-  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyq2D5r8EcsF5JSg6_BukxwKnxc01pcWoZpKz-vo98tt7KCq1eVqX9kJAlBr-H-MNMt/exec';
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbz9kqJZ9YtyELo4CQaZ8BKzHeTZJjehKfDLC7kA4kU0k2w1TDXVteCkURBo1dXn6gzU/exec';
   const TOTAL_SPOTS = 500;
 
   // ─────────────────────────────────────────────
@@ -847,6 +847,15 @@
   // ─────────────────────────────────────────────
   let emailCaptured = false;
 
+  function showAllSuccess() {
+    // Hero form
+    document.getElementById('hero-email-wrap').style.display = 'none';
+    document.getElementById('hero-email-success').style.display = 'block';
+    // Main form
+    document.getElementById('email-form-wrap').style.display = 'none';
+    document.getElementById('email-success').style.display = 'block';
+  }
+
   function submitHeroEmail() {
     const input = document.getElementById('hero-email-input');
     const err   = document.getElementById('hero-email-error');
@@ -865,11 +874,7 @@
     userEmail = email;
 
     sendToSheet({ action: 'submit', email: email, poll_vote: '', source: 'hero' });
-
-    document.getElementById('hero-email-wrap').style.display = 'none';
-    document.getElementById('hero-email-success').style.display = 'block';
-    document.getElementById('email-form-wrap').style.display = 'none';
-    document.getElementById('email-success').style.display = 'block';
+    showAllSuccess();
   }
 
   function submitEmail() {
@@ -895,8 +900,7 @@
     sendToSheet({ action: 'submit', email: email, poll_vote: '', source: 'landing_page' });
 
     setTimeout(function() {
-      document.getElementById('email-form-wrap').style.display = 'none';
-      document.getElementById('email-success').style.display = 'block';
+      showAllSuccess();
     }, 800);
   }
 
