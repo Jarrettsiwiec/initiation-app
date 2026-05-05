@@ -794,6 +794,12 @@
   let selectedName = null;
   let userEmail = '';
 
+  // UTM / source capture — reads ?source= or ?utm_source= from URL
+  function getSource(fallback) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('source') || params.get('utm_source') || fallback;
+  }
+
   // Seeded votes — results hidden until user votes
   const PRESET_NAMES = ['Embered Path', 'Slait', 'Ignis', 'Kova', 'Velo', 'Nudge'];
   const votes = { 'Embered Path': 34, 'Slait': 28, 'Ignis': 19, 'Kova': 16, 'Velo': 12, 'Nudge': 8, 'Other': 5 };
@@ -879,7 +885,7 @@
     emailCaptured = true;
     userEmail = email;
 
-    sendToSheet({ action: 'submit', email: email, poll_vote: '', source: 'hero' });
+    sendToSheet({ action: 'submit', email: email, poll_vote: '', source: getSource('hero') });
     showAllSuccess();
   }
 
@@ -903,7 +909,7 @@
     btn.disabled = true;
     btn.textContent = 'Saving...';
 
-    sendToSheet({ action: 'submit', email: email, poll_vote: '', source: 'landing_page' });
+    sendToSheet({ action: 'submit', email: email, poll_vote: '', source: getSource('landing_page') });
 
     setTimeout(function() {
       showAllSuccess();
