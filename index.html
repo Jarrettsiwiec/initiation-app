@@ -885,7 +885,7 @@
     emailCaptured = true;
     userEmail = email;
 
-    sendToSheet({ action: 'submit', email: email, poll_vote: '', source: getSource('hero') });
+    sendToSheet({ action: 'submit', email: email, poll_vote: pendingVote, source: getSource('hero') });
     showAllSuccess();
   }
 
@@ -909,7 +909,7 @@
     btn.disabled = true;
     btn.textContent = 'Saving...';
 
-    sendToSheet({ action: 'submit', email: email, poll_vote: '', source: getSource('landing_page') });
+    sendToSheet({ action: 'submit', email: email, poll_vote: pendingVote, source: getSource('landing_page') });
 
     setTimeout(function() {
       showAllSuccess();
@@ -933,6 +933,9 @@
     selectedName = val.trim() ? val.trim() : '__own__';
   }
 
+  // Stores vote if submitted before email
+  let pendingVote = '';
+
   function submitPoll() {
     if (!selectedName) return;
 
@@ -942,12 +945,16 @@
     }
 
     const finalName = selectedName;
-
-    // Bucket custom names as "Other" for display, but send real name to sheet
     const displayName = PRESET_NAMES.indexOf(finalName) >= 0 ? finalName : 'Other';
     votes[displayName] = (votes[displayName] || 0) + 1;
 
-    sendToSheet({ action: 'updateVote', email: userEmail || 'anonymous', poll_vote: finalName });
+    if (userEmail) {
+      // Email already captured — send vote immediately
+      sendToSheet({ action: 'updateVote', email: userEmail, poll_vote: finalName });
+    } else {
+      // Email not yet captured — store vote and send with email submission
+      pendingVote = finalName;
+    }
 
     showPollResults(displayName);
   }
