@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — The Initiation App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #12110F;
+      --surface: #1E1C19;
+      --text-primary: #F0EDE8;
+      --text-secondary: #9B9590;
+      --accent: #C8A97E;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 60px 24px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .back {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 48px;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .back:hover { opacity: 1; }
+
+    .site-name {
+      font-family: 'Lora', serif;
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .updated {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+
+    ul {
+      margin: 0 0 16px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      color: var(--text-primary);
+      opacity: 0.9;
+      margin-bottom: 8px;
+    }
+
+    li strong {
+      color: var(--text-primary);
+      opacity: 1;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      opacity: 0.9;
+    }
+    a:hover { opacity: 1; text-decoration: underline; }
+
+    hr {
+      border: none;
+      border-top: 1px solid #2A2723;
+      margin: 48px 0;
+    }
+
+    .footer {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 48px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="/" class="back">← Back to The Initiation App</a>
+
+    <div class="site-name">The Initiation App</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: May 10, 2026</p>
+
+    <p>The Initiation App ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use The Initiation App ("the App").</p>
+
+    <h2>Information We Collect</h2>
+
+    <p><strong>Information you provide:</strong></p>
+    <ul>
+      <li><strong>First name or nickname</strong> — collected during onboarding to personalize your experience. This is optional and can be skipped.</li>
+      <li><strong>Task descriptions</strong> — the text you enter when describing what you're stuck on. This is sent to our AI provider to generate a blocker diagnosis and intervention.</li>
+    </ul>
+
+    <p><strong>Information collected automatically:</strong></p>
+    <ul>
+      <li><strong>Session data</strong> — including blocker type, intervention shown, reward selected, and whether you tapped "I started." Used to improve your experience over time.</li>
+      <li><strong>Energy level</strong> — the low/medium/high selection you make each session.</li>
+      <li><strong>Push notification token</strong> — collected if you grant notification permission, used only to send session reminders from The Initiation App.</li>
+      <li><strong>Anonymous user identifier</strong> — a randomly generated ID used to associate your sessions. We do not collect your name, email, or any identifying information unless you choose to provide your first name.</li>
+      <li><strong>Subscription status</strong> — managed by RevenueCat to determine your access tier.</li>
+    </ul>
+
+    <h2>How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Deliver AI-powered blocker diagnosis and intervention</li>
+      <li>Personalize your experience with your preferred name</li>
+      <li>Send session reminders via push notification (only if you've granted permission)</li>
+      <li>Manage your subscription and access tier</li>
+      <li>Improve the accuracy of our AI responses over time</li>
+    </ul>
+    <p>We do not sell your personal information. We do not use your information for advertising.</p>
+
+    <h2>AI Processing</h2>
+    <p>Task descriptions you enter are sent to Anthropic for AI processing. Anthropic's privacy policy applies to this processing and can be found at <a href="https://anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>. We send only the task text and session context necessary to generate a response — we do not send your name or any other identifying information to Anthropic.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>The App uses the following third-party services:</p>
+    <ul>
+      <li><strong>Supabase</strong> — database and authentication (<a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>)</li>
+      <li><strong>Anthropic</strong> — AI processing (<a href="https://anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>)</li>
+      <li><strong>RevenueCat</strong> — subscription management (<a href="https://revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a>)</li>
+      <li><strong>Expo</strong> — app infrastructure (<a href="https://expo.dev/privacy" target="_blank">expo.dev/privacy</a>)</li>
+      <li><strong>Apple</strong> — payment processing for subscriptions (<a href="https://apple.com/legal/privacy" target="_blank">apple.com/legal/privacy</a>)</li>
+    </ul>
+
+    <h2>Data Retention</h2>
+    <p>We retain your session data for as long as your account is active. Anonymous session data may be retained for up to 12 months for product improvement purposes. You can request deletion of your data at any time by contacting us.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+
+    <h2>Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Request access to the data we hold about you</li>
+      <li>Request deletion of your data</li>
+      <li>Opt out of push notifications at any time via your device settings</li>
+    </ul>
+    <p>To exercise these rights, contact us at the email below.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the date at the top of this policy. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+    <hr />
+
+    <div class="footer">
+      <p><strong>The Initiation App</strong><br />
+      Colorado, United States<br />
+      <a href="mailto:juststarttemplate@gmail.com">juststarttemplate@gmail.com</a></p>
+    </div>
+  </div>
+</body>
+</html>
