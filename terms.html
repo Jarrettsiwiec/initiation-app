@@ -4,119 +4,134 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Service — The Initiation App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0f0f0f;
-      --surface: #1a1a1a;
-      --text: #e8e3dc;
-      --muted: #a09890;
-      --amber: #f5a623;
-      --border: #2a2a2a;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #12110F;
+      --surface: #1E1C19;
+      --surface2: #242220;
+      --text-primary: #F0EDE8;
+      --text-secondary: #9B9590;
+      --text-tertiary: #6B6660;
+      --accent: #C8A97E;
+      --accent2: #D4B896;
+      --line: rgba(240,237,232,0.08);
+    }
 
     body {
       background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif;
       font-size: 16px;
       line-height: 1.7;
       padding: 2rem 1.5rem;
     }
 
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-    }
+    .inner { max-width: 600px; margin: 0 auto; padding: 0 24px; }
 
     .back-link {
       display: inline-block;
-      color: var(--amber);
+      color: var(--accent);
       text-decoration: none;
       font-size: 0.9rem;
       margin-bottom: 2rem;
+      font-family: 'DM Sans', sans-serif;
     }
-
     .back-link:hover { text-decoration: underline; }
 
-    .app-name {
-      font-size: 0.85rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
+    .eyebrow {
+      font-size: 11px; font-weight: 500; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
     }
 
     h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--text);
+      font-family: 'Lora', serif;
+      font-size: clamp(28px, 6vw, 38px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--text-primary);
       margin-bottom: 0.5rem;
     }
 
     .last-updated {
-      color: var(--muted);
-      font-size: 0.9rem;
+      color: var(--text-tertiary);
+      font-size: 0.85rem;
       margin-bottom: 2rem;
     }
 
     .commitment {
       background: var(--surface);
-      border-left: 3px solid var(--amber);
-      padding: 1rem 1.25rem;
-      border-radius: 0 8px 8px 0;
+      border-left: 2px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 0 2px 2px 0;
       margin-bottom: 2.5rem;
-      color: var(--text);
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.65;
     }
 
+    .commitment strong { color: var(--text-primary); }
+
     h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--text);
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-primary);
       margin-top: 2.5rem;
       margin-bottom: 0.75rem;
       padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--line);
     }
 
-    p { margin-bottom: 1rem; color: var(--text); }
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    p strong { color: var(--text-primary); }
 
     ul {
       margin: 0.5rem 0 1rem 1.5rem;
-      color: var(--text);
+      color: var(--text-secondary);
+      font-size: 15px;
     }
 
     ul li { margin-bottom: 0.4rem; }
 
-    a { color: var(--amber); text-decoration: none; }
+    a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     .footer {
       margin-top: 3rem;
       padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .footer strong { color: var(--text); }
-
-    .footer-links {
-      margin-top: 1rem;
+      border-top: 1px solid var(--line);
+      color: var(--text-tertiary);
       font-size: 0.85rem;
     }
 
-    .footer-links a { color: var(--amber); margin-right: 1rem; }
+    .footer-brand {
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .footer a { color: var(--accent); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    .footer-links { margin-top: 0.75rem; }
+    .footer-links a { margin-right: 1rem; }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="inner">
 
     <a href="https://www.theinitiationapp.com/" class="back-link">← Back to The Initiation App</a>
 
-    <div class="app-name">The Initiation App</div>
-
+    <div class="eyebrow">The Initiation App</div>
     <h1>Terms of Service</h1>
     <div class="last-updated">Last updated: May 20, 2026</div>
 
@@ -145,7 +160,7 @@
     </ul>
 
     <h2>Your Data</h2>
-    <p>We collect minimal data to operate the App. We do not sell your data. We do not use your data for advertising. Full details are in our <a href="https://www.theinitiationapp.com/privacy">Privacy Policy</a>.</p>
+    <p>We collect minimal data to operate the App. We do not sell your data. We do not use your data for advertising. Full details are in our <a href="https://www.theinitiationapp.com/privacy.html">Privacy Policy</a>.</p>
     <p>Task descriptions you enter are processed by Anthropic's AI to generate responses. By using the App, you consent to this processing. We send only the task text and session context — never your name or identifying information.</p>
 
     <h2>Acceptable Use</h2>
@@ -172,34 +187,25 @@
 
     <h2>Apple App Store — Additional Terms</h2>
     <p>If you downloaded The Initiation App from the Apple App Store, the following additional terms apply.</p>
-
     <p><strong>License.</strong> Your license to use the App is a non-transferable license to use it on any Apple-branded devices you own or control, as permitted by Apple's Media Services Terms and Conditions. You may also access the App through Family Sharing or volume purchasing where applicable.</p>
-
     <p><strong>Responsibility.</strong> This agreement is between you and The Initiation App only — not Apple. We are solely responsible for the App and its content. Apple has no obligation to provide maintenance, support, or warranties for the App.</p>
-
     <p><strong>Warranty.</strong> If the App fails to meet any applicable warranty, you may notify Apple and Apple will refund your purchase price. Beyond that refund, Apple has no warranty obligations with respect to the App. All other warranty claims are our responsibility.</p>
-
     <p><strong>Product Claims.</strong> We — not Apple — are responsible for addressing any claims relating to the App, including product liability claims, regulatory compliance claims, and consumer protection claims.</p>
-
     <p><strong>Intellectual Property.</strong> If a third party claims the App infringes their intellectual property rights, we — not Apple — are solely responsible for investigating, defending, and resolving that claim.</p>
-
     <p><strong>Export Compliance.</strong> By using the App, you represent that you are not located in a country subject to a U.S. Government embargo or designated as a terrorist-supporting country, and that you are not on any U.S. Government list of prohibited or restricted parties.</p>
-
     <p><strong>Third Party Terms.</strong> When using the App, you agree to comply with applicable third party terms, including Anthropic's usage policies which govern the AI features of the App.</p>
-
     <p><strong>Third Party Beneficiary.</strong> Apple and its subsidiaries are third party beneficiaries of these Terms. Upon your acceptance, Apple has the right to enforce these Terms against you as a third party beneficiary.</p>
 
     <h2>Contact</h2>
     <p>Questions about these Terms? Contact us at <a href="mailto:theinitiationapp@gmail.com">theinitiationapp@gmail.com</a>.</p>
 
     <div class="footer">
-      <strong>The Initiation App</strong><br />
-      Colorado, United States<br />
-      <a href="mailto:theinitiationapp@gmail.com">theinitiationapp@gmail.com</a>
-
+      <div class="footer-brand">The Initiation App</div>
+      Colorado, United States &nbsp;·&nbsp; <a href="mailto:theinitiationapp@gmail.com">theinitiationapp@gmail.com</a>
       <div class="footer-links">
-        <a href="https://www.theinitiationapp.com/privacy">Privacy Policy</a>
-        <a href="https://www.theinitiationapp.com/terms">Terms of Service</a>
+        <a href="https://www.theinitiationapp.com/privacy.html">Privacy Policy</a>
+        <a href="https://www.theinitiationapp.com/terms.html">Terms of Service</a>
+        <a href="https://www.theinitiationapp.com/support.html">Support</a>
       </div>
     </div>
 
