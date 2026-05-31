@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Initiation App vs Tiimo: Which ADHD App Do You Actually Need? | The Initiation App</title>
+  <meta name="description" content="Tiimo helps with time blindness and daily structure. The Initiation App helps you start tasks when you're stuck. They solve different problems — here's how to know which one you need.">
+  <link rel="canonical" href="https://www.theinitiationapp.com/initiation-app-vs-tiimo">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Initiation App vs Tiimo: Which ADHD App Do You Actually Need?">
+  <meta property="og:description" content="Tiimo and The Initiation App both serve ADHD adults — but they solve completely different problems. Here's a clear breakdown of which tool fits which situation.">
+  <meta property="og:url" content="https://www.theinitiationapp.com/initiation-app-vs-tiimo">
+  <meta property="og:type" content="article">
+
+  <!-- Schema: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Initiation App vs Tiimo: Which ADHD App Do You Actually Need?",
+    "description": "A direct comparison of The Initiation App and Tiimo for adults with ADHD. Tiimo addresses time blindness and daily structure. The Initiation App addresses task initiation — the moment of being stuck before starting. They solve different problems and can be used together.",
+    "author": {
+      "@type": "Person",
+      "name": "Jarrett Siwiec",
+      "description": "Founder of The Initiation App. Built the app after years of firsthand ADHD task initiation struggles."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Initiation App",
+      "url": "https://www.theinitiationapp.com"
+    },
+    "datePublished": "2026-05-31",
+    "dateModified": "2026-05-31"
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between Tiimo and The Initiation App?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tiimo is a visual scheduling app that helps ADHD adults manage time blindness, build daily routines, and structure their day visually. The Initiation App addresses task initiation specifically — the moment when a scheduled task arrives and the person cannot start it despite intending to. Tiimo helps you know what to do and when. The Initiation App helps you actually start when you're stuck. They solve different sequential problems and can be used together effectively."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Tiimo good for ADHD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tiimo is good for ADHD adults who struggle with time blindness, daily structure, and routine maintenance. Its visual scheduling interface reduces cognitive load, and its gentle reminders are designed with neurodivergent users in mind. It is less effective for the task initiation problem — knowing a task is scheduled for 2pm does not help you start it at 2pm if an initiation blocker is active."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use Tiimo and The Initiation App together?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — they address sequential problems and work well together. Tiimo handles the scheduling layer: knowing what tasks exist and when they should happen. The Initiation App handles the initiation layer: actually starting a task when the scheduled time arrives and the activation signal won't fire. Many ADHD adults need both — the structure layer and the stuck-moment intervention layer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which is better for ADHD, Tiimo or The Initiation App?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Neither is objectively better — they address different problems. Tiimo is better if your primary challenge is time blindness, forgetting tasks exist, or struggling to maintain daily structure. The Initiation App is better if your primary challenge is being unable to start tasks even when you know they need to happen and intend to do them. If you have both problems — which is common in ADHD — using both tools together addresses the full picture."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does Tiimo do that The Initiation App doesn't?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tiimo provides visual daily scheduling, routine building, time-based reminders, and a visual representation of the day that helps with time blindness. The Initiation App does not have scheduling features — it is a point-of-use tool for the stuck moment, not a daily planning system. If visual time management and daily structure are your primary needs, Tiimo addresses those directly."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:              #12110F;
+      --surface:         #1E1C19;
+      --surface-mid:     #2A2723;
+      --text-primary:    #F0EDE8;
+      --text-secondary:  #9B9590;
+      --text-muted:      #5C5852;
+      --accent:          #C8A97E;
+      --accent-soft:     #3D3020;
+      --max-width:       760px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .site-header { border-bottom: 1px solid var(--surface-mid); padding: 20px 24px; }
+    .header-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; gap: 8px; }
+    .site-header a { font-size: 13px; font-weight: 400; color: var(--text-muted); text-decoration: none; letter-spacing: 0.04em; }
+    .site-header a:hover { color: var(--accent); }
+    .site-header .wordmark { font-family: 'Lora', serif; font-size: 13px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-left: 16px; }
+
+    main { max-width: var(--max-width); margin: 0 auto; padding: 60px 24px 100px; }
+
+    .label { font-size: 11px; font-weight: 500; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+
+    h1 { font-family: 'Lora', serif; font-size: clamp(28px, 5vw, 40px); font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; color: var(--text-primary); margin-bottom: 28px; }
+    h1 em { font-style: italic; color: var(--accent); }
+
+    .lede { font-size: 18px; font-weight: 300; color: var(--text-secondary); line-height: 1.65; margin-bottom: 16px; border-left: 2px solid var(--accent); padding-left: 20px; }
+    .meta { font-size: 13px; color: var(--text-muted); margin-bottom: 56px; }
+
+    h2 { font-family: 'Lora', serif; font-size: clamp(22px, 3.5vw, 26px); font-weight: 400; line-height: 1.3; color: var(--text-primary); margin: 56px 0 20px; }
+    h2 em { font-style: italic; color: var(--accent); }
+
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; color: var(--accent); letter-spacing: 0.04em; margin: 32px 0 10px; }
+
+    p { font-size: 16px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.75; }
+    strong { color: var(--text-primary); font-weight: 500; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .versus-header { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; margin: 32px 0; }
+    .versus-card { background: var(--surface); border: 1px solid var(--surface-mid); border-radius: 12px; padding: 20px 24px; }
+    .versus-card.featured { border-color: var(--accent); }
+    .versus-card .vc-name { font-family: 'Lora', serif; font-size: 18px; margin-bottom: 4px; }
+    .versus-card.featured .vc-name { color: var(--accent); }
+    .versus-card .vc-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
+    .versus-card .vc-price { font-size: 13px; font-weight: 500; color: var(--text-secondary); }
+    .versus-divider { font-family: 'Lora', serif; font-size: 24px; color: var(--text-muted); text-align: center; }
+
+    .problem-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
+    .problem-card { background: var(--surface); border: 1px solid var(--surface-mid); border-radius: 12px; padding: 22px 24px; }
+    .problem-card.featured { border-color: var(--accent); }
+    .problem-card .pc-app { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+    .problem-card .pc-app.a { color: var(--accent); }
+    .problem-card .pc-app.b { color: var(--text-muted); }
+    .problem-card .pc-problem { font-family: 'Lora', serif; font-size: 16px; color: var(--text-primary); margin-bottom: 12px; line-height: 1.4; font-style: italic; }
+    .problem-card .pc-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 14px; }
+    .comparison-table th { font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--surface-mid); }
+    .comparison-table th.col-a { color: var(--accent); }
+    .comparison-table td { padding: 14px; border-bottom: 1px solid var(--surface-mid); vertical-align: top; color: var(--text-secondary); line-height: 1.5; }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table td:first-child { font-weight: 500; color: var(--text-primary); width: 28%; }
+    .comparison-table td.win-a { color: var(--accent); }
+    .comparison-table td.win-b { color: var(--text-secondary); }
+    .comparison-table td.neither { color: var(--text-muted); font-style: italic; }
+    .comparison-table tr:hover td { background: var(--surface); }
+
+    .together-box { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 12px; padding: 28px 32px; margin: 32px 0; }
+    .together-box .tb-label { font-size: 10px; font-weight: 500; color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px; }
+    .together-box .tb-scenario { font-family: 'Lora', serif; font-size: 17px; color: var(--text-primary); line-height: 1.5; margin-bottom: 16px; font-style: italic; }
+    .together-box .tb-flow { display: flex; flex-direction: column; gap: 10px; }
+    .together-box .tb-step { font-size: 14px; color: var(--text-secondary); display: flex; gap: 12px; align-items: flex-start; }
+    .together-box .tb-step .tb-num { font-family: 'Lora', serif; font-size: 16px; color: var(--accent); flex-shrink: 0; width: 20px; }
+
+    .decision-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
+    .decision-table th { font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--surface-mid); }
+    .decision-table td { padding: 14px; border-bottom: 1px solid var(--surface-mid); vertical-align: top; color: var(--text-secondary); line-height: 1.5; }
+    .decision-table tr:last-child td { border-bottom: none; }
+    .decision-table td:first-child { width: 55%; }
+    .decision-table td.rec-a { color: var(--accent); font-weight: 500; }
+    .decision-table td.rec-b { color: var(--text-secondary); font-weight: 500; }
+    .decision-table td.rec-both { color: var(--accent); font-weight: 500; }
+    .decision-table tr:hover td { background: var(--surface); }
+
+    .faq-section { margin-top: 64px; }
+    .faq-section h2 { margin-top: 0; }
+    details { border-bottom: 1px solid var(--surface-mid); padding: 4px 0; }
+    details:first-of-type { border-top: 1px solid var(--surface-mid); }
+    summary { font-size: 16px; font-weight: 400; color: var(--text-primary); padding: 20px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 20px; color: var(--accent); flex-shrink: 0; line-height: 1; }
+    details[open] summary::after { content: '−'; }
+    details[open] summary { color: var(--accent); }
+    .faq-answer { font-size: 15px; color: var(--text-secondary); line-height: 1.7; padding-bottom: 20px; }
+
+    .cta-block { background: var(--surface); border: 1px solid var(--surface-mid); border-radius: 16px; padding: 40px 36px; margin-top: 64px; text-align: center; }
+    .cta-block h2 { margin-top: 0; font-size: 24px; margin-bottom: 12px; }
+    .cta-block p { font-size: 15px; max-width: 480px; margin: 0 auto 28px; }
+    .cta-btn { display: inline-block; background: var(--accent); color: var(--bg); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; padding: 14px 32px; border-radius: 100px; text-decoration: none; letter-spacing: 0.02em; transition: opacity 0.15s; }
+    .cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .cta-note { font-size: 12px; color: var(--text-muted); margin-top: 14px; }
+
+    .author-bio { border-top: 1px solid var(--surface-mid); margin-top: 64px; padding-top: 32px; display: flex; gap: 16px; align-items: flex-start; }
+    .author-bio .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--accent-soft); border: 1px solid var(--accent); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Lora', serif; font-size: 18px; color: var(--accent); }
+    .author-bio .bio-text { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .author-bio .bio-text strong { color: var(--text-secondary); }
+
+    .site-footer { border-top: 1px solid var(--surface-mid); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    .site-footer a { color: var(--text-muted); margin: 0 8px; }
+    .site-footer a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      main { padding: 40px 20px 80px; }
+      .versus-header { grid-template-columns: 1fr; }
+      .versus-divider { display: none; }
+      .problem-cards { grid-template-columns: 1fr; }
+      .comparison-table, .decision-table { font-size: 13px; }
+      .comparison-table td, .comparison-table th,
+      .decision-table td, .decision-table th { padding: 10px 8px; }
+      .cta-block { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/">← Back</a>
+      <span class="wordmark">The Initiation App</span>
+    </div>
+  </header>
+
+  <main>
+
+    <p class="label">App Comparison · 2026</p>
+
+    <h1>The Initiation App vs Tiimo: <em>Which ADHD App Do You Actually Need?</em></h1>
+
+    <p class="lede">Tiimo and The Initiation App are both built for ADHD adults — but they solve completely different problems at different points in the day. Understanding which problem you have makes the choice straightforward.</p>
+
+    <p class="meta">By Jarrett Siwiec · Updated May 2026 · 7 min read</p>
+
+    <div class="versus-header">
+      <div class="versus-card featured">
+        <div class="vc-name">The Initiation App</div>
+        <div class="vc-desc">Real-time ADHD task initiation — diagnosis + matched intervention</div>
+        <div class="vc-price">Free / $6.99/month · iOS</div>
+      </div>
+      <div class="versus-divider">vs</div>
+      <div class="versus-card">
+        <div class="vc-name">Tiimo</div>
+        <div class="vc-desc">Visual daily planner for neurodivergent users</div>
+        <div class="vc-price">$6.99/month · iOS + Android</div>
+      </div>
+    </div>
+
+    <p>These two apps are frequently compared because they're both positioned for ADHD adults and priced identically at $6.99/month. But comparing them as competitors misunderstands what each one does. <strong>They don't compete — they address different sequential problems in the same day.</strong></p>
+
+    <p>Tiimo solves the planning layer. The Initiation App solves the starting layer. If you've ever used a scheduling app, seen the task arrive in your schedule, and still been unable to begin — you have both problems, and one tool isn't going to fix both.</p>
+
+    <h2>The Core Problem Each Tool Solves</h2>
+
+    <div class="problem-cards">
+      <div class="problem-card featured">
+        <div class="pc-app a">The Initiation App</div>
+        <div class="pc-problem">"I know I need to start this task right now. I cannot start it."</div>
+        <div class="pc-desc">The moment when intention and action disconnect. The task is known, the time is right, the intention is genuine — and the neurological activation signal won't fire. This is a task initiation problem.</div>
+      </div>
+      <div class="problem-card">
+        <div class="pc-app b">Tiimo</div>
+        <div class="pc-problem">"I lose track of time and forget what I'm supposed to be doing when."</div>
+        <div class="pc-desc">The planning and awareness layer. Time passes invisibly, tasks don't get scheduled or remembered, the day has no visible structure. This is a time blindness and daily structure problem.</div>
+      </div>
+    </div>
+
+    <p>One way to tell which problem you have: <strong>if you had a perfect schedule with every task timed and a reminder firing at the right moment, would you start the task when the reminder went off?</strong> If yes — Tiimo is what you need. If no — you have a task initiation problem that scheduling won't fix, and The Initiation App addresses that layer.</p>
+
+    <h2>What Tiimo Does Well</h2>
+
+    <p>Tiimo is one of the best-designed productivity apps for neurodivergent users. Its visual daily planner uses color, icons, and timeline views to make the structure of a day legible in a way that text-based calendars don't. For ADHD adults with significant time blindness — the neurological difficulty perceiving time passing and estimating how long tasks take — this visual representation is genuinely useful.</p>
+
+    <p>Its reminders are designed with ADHD in mind: gentle, non-shame-based, and configurable to give advance notice rather than just alerting at the task's start time. It also supports routine building — creating repeating daily structures that reduce the cognitive load of deciding what to do next.</p>
+
+    <h3>Where Tiimo falls short for task initiation</h3>
+    <p>Tiimo's limitation is architectural. It is a planning and awareness tool — it helps you know what should happen and when. It cannot help you start something once you're stuck. When the 2pm reminder fires for the task you've been dreading, Tiimo has done its job. What happens next is outside its scope.</p>
+
+    <h2>Feature Comparison</h2>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="col-a">The Initiation App</th>
+          <th>Tiimo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Task initiation help</td>
+          <td class="win-a">✓ Core feature — diagnosis + intervention</td>
+          <td class="neither">✗ Not in scope</td>
+        </tr>
+        <tr>
+          <td>Blocker diagnosis</td>
+          <td class="win-a">✓ 6 blockers identified per session</td>
+          <td class="neither">✗ Not in scope</td>
+        </tr>
+        <tr>
+          <td>Dopamine pairing</td>
+          <td class="win-a">✓ Energy-matched rewards</td>
+          <td class="neither">✗ Not in scope</td>
+        </tr>
+        <tr>
+          <td>Visual daily scheduling</td>
+          <td class="neither">✗ Not in scope</td>
+          <td class="win-b">✓ Core feature</td>
+        </tr>
+        <tr>
+          <td>Time blindness support</td>
+          <td class="neither">✗ Not in scope</td>
+          <td class="win-b">✓ Visual timeline, time estimates</td>
+        </tr>
+        <tr>
+          <td>Routine building</td>
+          <td class="neither">✗ Not in scope</td>
+          <td class="win-b">✓ Repeating daily structures</td>
+        </tr>
+        <tr>
+          <td>ADHD-aware reminders</td>
+          <td class="neither">✗ Not in scope</td>
+          <td class="win-b">✓ Gentle, configurable advance notices</td>
+        </tr>
+        <tr>
+          <td>Pattern recognition</td>
+          <td class="win-a">✓ Blocker history over time</td>
+          <td class="neither">✗ Not in scope</td>
+        </tr>
+        <tr>
+          <td>Platform</td>
+          <td>iOS only</td>
+          <td class="win-b">iOS + Android</td>
+        </tr>
+        <tr>
+          <td>Price</td>
+          <td>Free (1/day) / $6.99/mo</td>
+          <td>$6.99/mo (no free tier)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Using Both Together — The Full ADHD Stack</h2>
+
+    <p>Many ADHD adults have both problems: time blindness that makes daily structure difficult, and task initiation failure that makes starting impossible even when they know what to do. For those people, Tiimo and The Initiation App address different layers of the same day.</p>
+
+    <div class="together-box">
+      <div class="tb-label">How they work together</div>
+      <div class="tb-scenario">"It's 2pm. Tiimo reminds me the report is scheduled now. I open The Initiation App because I know I'm going to need help actually starting it."</div>
+      <div class="tb-flow">
+        <div class="tb-step"><span class="tb-num">1</span><span>Tiimo provides the structure: the task exists, it's scheduled for now, the reminder fires</span></div>
+        <div class="tb-step"><span class="tb-num">2</span><span>The Initiation App handles what comes next: diagnosing which blocker is active and delivering the matched intervention</span></div>
+        <div class="tb-step"><span class="tb-num">3</span><span>The task starts — Tiimo marks it complete, The Initiation App logs the session</span></div>
+      </div>
+    </div>
+
+    <p>The combined cost is $13.98/month — less than a single ADHD coaching session — and addresses both the planning layer and the initiation layer that together account for most ADHD daily functioning difficulty.</p>
+
+    <h2>How to Choose</h2>
+
+    <table class="decision-table">
+      <thead>
+        <tr>
+          <th>Your primary challenge</th>
+          <th>Best fit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>I forget tasks exist or lose track of time completely</td>
+          <td class="rec-b">Tiimo</td>
+        </tr>
+        <tr>
+          <td>I know what needs to happen but can't make myself start</td>
+          <td class="rec-a">The Initiation App</td>
+        </tr>
+        <tr>
+          <td>I need visual daily structure and routine support</td>
+          <td class="rec-b">Tiimo</td>
+        </tr>
+        <tr>
+          <td>I'm stuck on a specific task right now and need help</td>
+          <td class="rec-a">The Initiation App</td>
+        </tr>
+        <tr>
+          <td>I have both time blindness and task initiation problems</td>
+          <td class="rec-both">Both — they solve different layers</td>
+        </tr>
+        <tr>
+          <td>I need Android support</td>
+          <td class="rec-b">Tiimo — The Initiation App is iOS only</td>
+        </tr>
+        <tr>
+          <td>I want to try before paying</td>
+          <td class="rec-a">The Initiation App — free tier available</td>
+        </tr>
+        <tr>
+          <td>I struggle with fear of failure or low interest specifically</td>
+          <td class="rec-a">The Initiation App — Tiimo doesn't address initiation blockers</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>What is the difference between Tiimo and The Initiation App?</summary>
+        <div class="faq-answer">
+          <p>Tiimo is a visual scheduling app that helps ADHD adults manage time blindness, build daily routines, and structure their day visually. The Initiation App addresses task initiation specifically — the moment when a scheduled task arrives and the person cannot start it despite intending to. Tiimo helps you know what to do and when. The Initiation App helps you actually start when you're stuck. They solve different sequential problems and work well together.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Is Tiimo good for ADHD?</summary>
+        <div class="faq-answer">
+          <p>Tiimo is good for ADHD adults who struggle with time blindness, daily structure, and routine maintenance. Its visual scheduling interface reduces cognitive load and its gentle reminders are designed with neurodivergent users in mind. It is less effective for the task initiation problem — knowing a task is scheduled for 2pm does not help you start it at 2pm if an initiation blocker is active.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I use Tiimo and The Initiation App together?</summary>
+        <div class="faq-answer">
+          <p>Yes — they address sequential problems and work well together. Tiimo handles the scheduling layer: knowing what tasks exist and when they should happen. The Initiation App handles the initiation layer: actually starting a task when the time arrives and the activation signal won't fire. Many ADHD adults need both — the structure layer and the stuck-moment intervention layer.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Which is better for ADHD, Tiimo or The Initiation App?</summary>
+        <div class="faq-answer">
+          <p>Neither is objectively better — they address different problems. Tiimo is better if your primary challenge is time blindness, forgetting tasks, or struggling to maintain daily structure. The Initiation App is better if your primary challenge is being unable to start tasks even when you know they need to happen. If you have both problems — which is common in ADHD — using both together addresses the full picture.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What does Tiimo do that The Initiation App doesn't?</summary>
+        <div class="faq-answer">
+          <p>Tiimo provides visual daily scheduling, routine building, time-based reminders, and a visual representation of the day that helps with time blindness. The Initiation App has no scheduling features — it is a point-of-use tool for the stuck moment, not a daily planning system. If visual time management and daily structure are your primary needs, Tiimo addresses those directly and The Initiation App does not.</p>
+        </div>
+      </details>
+
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-block">
+      <h2>Tiimo tells you when. <em>We help you start.</em></h2>
+      <p>The Initiation App handles the moment Tiimo can't — when the reminder fires and the activation signal still won't. Free to try, no commitment.</p>
+      <a href="https://apps.apple.com/us/app/the-initiation-app/id6767593584" class="cta-btn">Download free on iOS</a>
+      <p class="cta-note">Free tier: 1 session/day · Paid: $6.99/month · iOS only</p>
+    </div>
+
+    <!-- Related pages -->
+    <nav style="margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--surface-mid);">
+      <p style="font-size: 13px; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; margin-bottom: 16px;">Related</p>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <a href="/best-apps-adhd-task-initiation" style="font-size: 15px; color: var(--text-secondary);">Best Apps for ADHD Task Initiation — Full Comparison →</a>
+        <a href="/initiation-app-vs-goblin-tools" style="font-size: 15px; color: var(--text-secondary);">The Initiation App vs Goblin Tools →</a>
+        <a href="/adhd-task-paralysis" style="font-size: 15px; color: var(--text-secondary);">The 6 ADHD Task Blockers Explained →</a>
+      </div>
+    </nav>
+
+    <!-- Author bio -->
+    <div class="author-bio">
+      <div class="avatar">J</div>
+      <p class="bio-text"><strong>Jarrett Siwiec</strong> is the founder of The Initiation App, built in Gypsum, Colorado. He has ADHD and built the app after years of firsthand task initiation struggles. This comparison is written to help people find the right tool — Tiimo is a genuinely good product that solves a real problem.</p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2026 The Initiation App · Gypsum, Colorado, United States</div>
+    <div style="margin-top: 10px;">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+
+</body>
+</html>
