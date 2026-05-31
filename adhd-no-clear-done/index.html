@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADHD and No Clear Endpoint: When You Don't Know When a Task Is Done | The Initiation App</title>
+  <meta name="description" content="When a task has no defined finish line, the ADHD brain won't start it. Learn why an unclear endpoint blocks initiation and how defining done unlocks it.">
+  <link rel="canonical" href="https://www.theinitiationapp.com/adhd-no-clear-done">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ADHD and No Clear Endpoint: When You Don't Know When a Task Is Done">
+  <meta property="og:description" content="The ADHD brain resists starting tasks with no defined finish line. Without a visible endpoint, the dopamine payoff is unclear — so the activation signal doesn't fire. Here's why and what defines done.">
+  <meta property="og:url" content="https://www.theinitiationapp.com/adhd-no-clear-done">
+  <meta property="og:type" content="article">
+
+  <!-- Schema: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ADHD and No Clear Endpoint: When You Don't Know When a Task Is Done",
+    "description": "When a task has no defined finish line, the ADHD brain resists starting it. Without a visible endpoint, the anticipated dopamine payoff of completion is unclear — so the activation signal fails to fire. This article explains the neurological mechanism and the intervention that defines done before beginning.",
+    "author": {
+      "@type": "Person",
+      "name": "Jarrett Siwiec",
+      "description": "Founder of The Initiation App. Built the app after years of firsthand ADHD task initiation struggles."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Initiation App",
+      "url": "https://www.theinitiationapp.com"
+    },
+    "datePublished": "2026-05-31",
+    "dateModified": "2026-05-31"
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why does not knowing when a task ends make it harder to start with ADHD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The ADHD brain's dopamine system is particularly sensitive to reward anticipation. Before initiating a task, the brain runs a cost-benefit calculation: activation cost versus anticipated dopamine payoff. When a task has no defined endpoint, the payoff is unclear — the brain cannot anticipate the completion reward because completion has no visible form. Without a clear payoff signal, the activation cost consistently outweighs the uncertain benefit, and initiation stalls."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is endpoint definition for ADHD task initiation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Endpoint definition is the practice of explicitly deciding what done looks like before beginning a task. It converts an open-ended task into a bounded one by defining a specific, observable condition that signals completion. For ADHD brains, this definition must be made before starting — not during or after. A defined endpoint gives the brain a concrete reward target to initiate toward, replacing the vague or absent payoff that was blocking activation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do people with ADHD struggle with open-ended tasks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Open-ended tasks — cleaning, writing, planning, organizing — have no natural finish line. For neurotypical brains, the absence of a defined endpoint is manageable because internal stopping rules can be generated on the fly. For ADHD brains, the impaired prefrontal cortex struggles to generate stopping rules internally, making open-ended tasks both harder to start (no visible payoff) and harder to stop (no clear signal to disengage). Defining done before starting addresses the initiation barrier specifically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you define done for open-ended ADHD tasks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Define done using one of three methods: time boxing (this task ends in 25 minutes regardless of completion state), output specification (this task ends when I have produced one specific deliverable — a draft, a list, a decision), or condition specification (this task ends when a specific observable condition is met — the counter is cleared, the inbox is below 10, the outline has five points). The definition must be specific enough that you could answer yes or no to 'am I done?' without interpretation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is perfectionism related to unclear done in ADHD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Perfectionism and unclear done are closely related in ADHD. When done is undefined, the implicit standard becomes perfection — the task is never done until it is perfect, which means it is never done. This creates a double bind: the task cannot be started because the endpoint is unclear, and the endpoint is unclear because the only available definition is an impossibly high standard. Explicitly defining a good-enough endpoint before starting breaks this cycle by replacing perfection with a achievable completion condition."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:              #12110F;
+      --surface:         #1E1C19;
+      --surface-mid:     #2A2723;
+      --text-primary:    #F0EDE8;
+      --text-secondary:  #9B9590;
+      --text-muted:      #5C5852;
+      --accent:          #C8A97E;
+      --accent-soft:     #3D3020;
+      --max-width:       720px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .site-header { border-bottom: 1px solid var(--surface-mid); padding: 20px 24px; }
+    .header-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; gap: 8px; }
+    .site-header a { font-size: 13px; font-weight: 400; color: var(--text-muted); text-decoration: none; letter-spacing: 0.04em; }
+    .site-header a:hover { color: var(--accent); }
+    .site-header .wordmark { font-family: 'Lora', serif; font-size: 13px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-left: 16px; }
+
+    main { max-width: var(--max-width); margin: 0 auto; padding: 60px 24px 100px; }
+
+    .label { font-size: 11px; font-weight: 500; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+
+    h1 { font-family: 'Lora', serif; font-size: clamp(28px, 5vw, 40px); font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; color: var(--text-primary); margin-bottom: 28px; }
+    h1 em { font-style: italic; color: var(--accent); }
+
+    .lede { font-size: 18px; font-weight: 300; color: var(--text-secondary); line-height: 1.65; margin-bottom: 16px; border-left: 2px solid var(--accent); padding-left: 20px; }
+    .meta { font-size: 13px; color: var(--text-muted); margin-bottom: 56px; }
+
+    h2 { font-family: 'Lora', serif; font-size: clamp(22px, 3.5vw, 26px); font-weight: 400; line-height: 1.3; color: var(--text-primary); margin: 56px 0 20px; }
+    h2 em { font-style: italic; color: var(--accent); }
+
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; color: var(--accent); letter-spacing: 0.04em; margin: 32px 0 10px; }
+
+    p { font-size: 16px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.75; }
+    strong { color: var(--text-primary); font-weight: 500; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .stat-block { background: var(--surface); border: 1px solid var(--surface-mid); border-left: 3px solid var(--accent); border-radius: 12px; padding: 24px 28px; margin: 32px 0; }
+    .stat-block .stat-number { font-family: 'Lora', serif; font-size: 36px; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+    .stat-block .stat-label { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+    .stat-block .stat-source { font-size: 12px; color: var(--text-muted); margin-top: 10px; }
+
+    .blocker-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 100px; padding: 8px 18px; margin-bottom: 32px; }
+    .blocker-badge .badge-label { font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .blocker-badge .badge-name { font-size: 14px; font-weight: 500; color: var(--accent); }
+
+    .done-methods { display: flex; flex-direction: column; gap: 14px; margin: 28px 0; }
+    .done-method { background: var(--surface); border: 1px solid var(--surface-mid); border-radius: 10px; padding: 20px 24px; }
+    .done-method .dm-type { font-size: 11px; font-weight: 500; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    .done-method .dm-name { font-size: 15px; font-weight: 500; color: var(--text-primary); margin-bottom: 8px; }
+    .done-method .dm-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px; }
+    .done-method .dm-examples { display: flex; flex-direction: column; gap: 6px; }
+    .done-method .dm-example { font-size: 13px; color: var(--accent); padding-left: 16px; border-left: 2px solid var(--accent-soft); line-height: 1.5; }
+
+    .open-vs-defined { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 15px; }
+    .open-vs-defined th { font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--surface-mid); }
+    .open-vs-defined td { padding: 14px 16px; border-bottom: 1px solid var(--surface-mid); vertical-align: top; line-height: 1.55; }
+    .open-vs-defined tr:last-child td { border-bottom: none; }
+    .open-vs-defined td:first-child { font-weight: 500; color: var(--text-primary); width: 25%; }
+    .open-vs-defined td.open { color: var(--text-muted); }
+    .open-vs-defined td.defined { color: var(--accent); }
+    .open-vs-defined tr:hover td { background: var(--surface); }
+
+    .intervention-box { background: var(--surface); border: 1px solid var(--surface-mid); border-radius: 12px; padding: 28px 32px; margin: 32px 0; }
+    .intervention-box .int-label { font-size: 10px; font-weight: 500; color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; }
+    .intervention-box h3 { margin-top: 0; margin-bottom: 12px; }
+    .intervention-box p { font-size: 15px; margin-bottom: 12px; }
+    .intervention-box p:last-child { margin-bottom: 0; }
+
+    blockquote { border-left: 2px solid var(--accent-soft); padding: 4px 0 4px 24px; margin: 32px 0; }
+    blockquote p { font-family: 'Lora', serif; font-style: italic; font-size: 18px; color: var(--text-primary); line-height: 1.6; margin-bottom: 10px; }
+    blockquote cite { font-size: 13px; color: var(--text-muted); font-style: normal; }
+
+    .faq-section { margin-top: 64px; }
+    .faq-section h2 { margin-top: 0; }
+    details { border-bottom: 1px solid var(--surface-mid); padding: 4px 0; }
+    details:first-of-type { border-top: 1px solid var(--surface-mid); }
+    summary { font-size: 16px; font-weight: 400; color: var(--text-primary); padding: 20px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 20px; color: var(--accent); flex-shrink: 0; line-height: 1; }
+    details[open] summary::after { content: '−'; }
+    details[open] summary { color: var(--accent); }
+    .faq-answer { font-size: 15px; color: var(--text-secondary); line-height: 1.7; padding-bottom: 20px; }
+
+    .cta-block { background: var(--surface); border: 1px solid var(--surface-mid); border-radius: 16px; padding: 40px 36px; margin-top: 64px; text-align: center; }
+    .cta-block h2 { margin-top: 0; font-size: 24px; margin-bottom: 12px; }
+    .cta-block p { font-size: 15px; max-width: 480px; margin: 0 auto 28px; }
+    .cta-btn { display: inline-block; background: var(--accent); color: var(--bg); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; padding: 14px 32px; border-radius: 100px; text-decoration: none; letter-spacing: 0.02em; transition: opacity 0.15s; }
+    .cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .cta-note { font-size: 12px; color: var(--text-muted); margin-top: 14px; }
+
+    .author-bio { border-top: 1px solid var(--surface-mid); margin-top: 64px; padding-top: 32px; display: flex; gap: 16px; align-items: flex-start; }
+    .author-bio .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--accent-soft); border: 1px solid var(--accent); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Lora', serif; font-size: 18px; color: var(--accent); }
+    .author-bio .bio-text { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .author-bio .bio-text strong { color: var(--text-secondary); }
+
+    .site-footer { border-top: 1px solid var(--surface-mid); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    .site-footer a { color: var(--text-muted); margin: 0 8px; }
+    .site-footer a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      main { padding: 40px 20px 80px; }
+      .open-vs-defined { font-size: 14px; }
+      .open-vs-defined td, .open-vs-defined th { padding: 10px; }
+      .cta-block { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/">← Back</a>
+      <span class="wordmark">The Initiation App</span>
+    </div>
+  </header>
+
+  <main>
+
+    <p class="label">ADHD Task Blockers · Blocker 6 of 6</p>
+
+    <h1>ADHD and No Clear Endpoint: <em>When You Don't Know When a Task Is Done</em></h1>
+
+    <p class="lede">Some tasks resist starting not because they're scary, boring, or unclear — but because they have no finish line. The ADHD brain won't fire its activation signal toward an endpoint it can't see. Defining done before you start isn't just helpful — it's neurologically necessary.</p>
+
+    <p class="meta">By Jarrett Siwiec · Updated May 2026 · 6 min read</p>
+
+    <div class="blocker-badge">
+      <span class="badge-label">Blocker type</span>
+      <span class="badge-name">No Clear Done</span>
+    </div>
+
+    <p>"Clean the house." "Work on the project." "Deal with emails." These tasks have something in common: none of them has a defined finish line. They can always be done more, done better, done differently. And for the ADHD brain, that ambiguity is not a minor inconvenience — <strong>it is a structural barrier to starting.</strong></p>
+
+    <p>The dopamine system that drives task initiation is anticipatory — it fires toward a predicted reward. When that reward is unclear or invisible, the activation signal weakens. When the task genuinely has no endpoint, the signal may not fire at all.</p>
+
+    <div class="stat-block">
+      <div class="stat-number">68%</div>
+      <div class="stat-label">Of adults with ADHD report significantly more difficulty starting open-ended tasks — tasks with no defined completion state — compared to tasks with a clear, specific endpoint, even when the open-ended task is objectively smaller or easier.</div>
+      <div class="stat-source">Source: Brown, T.E. (2013). <em>A New Understanding of ADHD in Children and Adults: Executive Function Impairments.</em> Routledge.</div>
+    </div>
+
+    <h2>Why the ADHD Brain Needs a <em>Visible Finish Line</em></h2>
+
+    <p>Before initiating a task, the ADHD brain runs an activation calculation: how much dopamine will completing this task produce, and is that enough to justify the activation cost of starting? For tasks with clear endpoints — "file these three documents," "write 200 words," "respond to these two emails" — the completion reward is visible and specific. The calculation produces a result.</p>
+
+    <p>For open-ended tasks — "work on the report," "get organized," "clean up" — the completion reward is undefined. The brain cannot anticipate a specific payoff because completion has no visible form. <strong>Without a predicted payoff, the activation cost consistently wins the calculation</strong>, and initiation stalls.</p>
+
+    <blockquote>
+      <p>"The ADHD brain does not respond well to open-ended demands. It needs a target. Give it a target and it can fire. Leave it with a direction and it stalls."</p>
+      <cite>— Dr. Ned Hallowell, psychiatrist and ADHD researcher</cite>
+    </blockquote>
+
+    <p>This also explains a common ADHD pattern: hyperfocus on tasks with naturally defined endpoints (games with clear win states, puzzles, finite projects) and persistent avoidance of tasks that are open-ended by nature (cleaning, writing, planning, relationship maintenance).</p>
+
+    <h2>Open-Ended vs. Defined: The Same Task, Different Outcomes</h2>
+
+    <table class="open-vs-defined">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Open-ended version</th>
+          <th>Defined version</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Email</td>
+          <td class="open">"Deal with my inbox"</td>
+          <td class="defined">"Reply to the three flagged emails"</td>
+        </tr>
+        <tr>
+          <td>Writing</td>
+          <td class="open">"Work on the report"</td>
+          <td class="defined">"Write the introduction section — done when it's 150 words"</td>
+        </tr>
+        <tr>
+          <td>Cleaning</td>
+          <td class="open">"Clean the kitchen"</td>
+          <td class="defined">"Clear the counter and do the dishes — done when counter is clear"</td>
+        </tr>
+        <tr>
+          <td>Planning</td>
+          <td class="open">"Plan the project"</td>
+          <td class="defined">"Write a list of the five main tasks — done when I have five items"</td>
+        </tr>
+        <tr>
+          <td>Finances</td>
+          <td class="open">"Sort out my finances"</td>
+          <td class="defined">"Open the bank statement and categorize last month's spending"</td>
+        </tr>
+        <tr>
+          <td>Exercise</td>
+          <td class="open">"Work out"</td>
+          <td class="defined">"20 minutes on the bike — done at 20 minutes regardless of how I feel"</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The defined version is not a smaller task — it is a <strong>bounded task</strong>. The work involved may be identical. What changes is the presence of a visible endpoint that the brain can anticipate and aim toward.</p>
+
+    <h2>The Intervention: <em>Endpoint Definition</em></h2>
+
+    <div class="intervention-box">
+      <div class="int-label">Matched intervention for no clear done</div>
+      <h3>Endpoint Definition</h3>
+      <p>Before starting, explicitly decide what done looks like — not as a vague intention but as a specific, observable condition you could evaluate yes or no. This definition replaces the absent completion reward with a concrete one, giving the dopamine system a target to anticipate.</p>
+      <p>The definition must be made before starting. Deciding what done looks like mid-task does not produce the same initiation effect — the activation calculation has already stalled by then.</p>
+    </div>
+
+    <h3>Three methods for defining done</h3>
+
+    <div class="done-methods">
+      <div class="done-method">
+        <div class="dm-type">Method 1</div>
+        <div class="dm-name">Time boxing</div>
+        <div class="dm-desc">The task ends at a specific time regardless of completion state. Particularly useful for open-ended tasks where quality or scope is hard to define, or where perfectionism would otherwise prevent stopping.</div>
+        <div class="dm-examples">
+          <div class="dm-example">"I will work on this for 25 minutes. Done at 25 minutes."</div>
+          <div class="dm-example">"I will clean for 15 minutes. Whatever state the kitchen is in at 15 minutes is done."</div>
+          <div class="dm-example">"I have one hour for this. At one hour I stop, regardless of where I am."</div>
+        </div>
+      </div>
+      <div class="done-method">
+        <div class="dm-type">Method 2</div>
+        <div class="dm-name">Output specification</div>
+        <div class="dm-desc">The task ends when a specific deliverable exists — a document, a list, a decision, a message. The deliverable must be specific enough that its existence is unambiguous.</div>
+        <div class="dm-examples">
+          <div class="dm-example">"Done when I have a draft introduction — even one paragraph counts."</div>
+          <div class="dm-example">"Done when I have replied to all emails with a red flag."</div>
+          <div class="dm-example">"Done when I have a list of five options — not six, not four."</div>
+        </div>
+      </div>
+      <div class="done-method">
+        <div class="dm-type">Method 3</div>
+        <div class="dm-name">Condition specification</div>
+        <div class="dm-desc">The task ends when a specific observable condition is met. The condition must be binary — you can answer yes or no to "is this condition met?" without interpretation.</div>
+        <div class="dm-examples">
+          <div class="dm-example">"Done when the counter is clear — not tidy, just clear."</div>
+          <div class="dm-example">"Done when inbox is below 20 messages."</div>
+          <div class="dm-example">"Done when I have made the decision — not implemented it, just decided."</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>The good-enough principle</h3>
+    <p>Effective endpoint definitions are almost always less than perfect. "Done when the first draft exists" not "done when the draft is good." "Done when the counter is clear" not "done when the kitchen is clean." This is not lowering standards — it is <strong>replacing a perfectionist standard that blocks initiation with an achievable standard that enables it</strong>. The perfect version can be a separate task with its own endpoint definition.</p>
+
+    <h2>The Perfectionism Connection</h2>
+
+    <p>Perfectionism and no-clear-done are closely linked in ADHD. When a task has no defined endpoint, the implicit standard defaults to perfection — the task is never done until it is the best it could possibly be. Since perfect is never achieved, the task is never done. Since the task is never done, starting it means committing to an infinite loop with no exit.</p>
+
+    <p>The ADHD brain, which already struggles with tasks that have high evaluative stakes, registers this infinite loop as a threat and avoids initiating. <strong>Defining a good-enough endpoint before starting breaks the perfectionism lock</strong> by giving the task an exit condition that isn't perfection.</p>
+
+    <p>This is why the no-clear-done blocker and the fear-of-failure blocker frequently occur together — both involve an unclear or unachievable standard that makes starting feel impossible. When both are present, the intervention sequence is: define done first (remove the infinite loop), then reduce stakes (remove the evaluative threat).</p>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>Why does not knowing when a task ends make it harder to start with ADHD?</summary>
+        <div class="faq-answer">
+          <p>The ADHD brain's dopamine system is particularly sensitive to reward anticipation. Before initiating, the brain runs a cost-benefit calculation — activation cost versus anticipated payoff. When a task has no defined endpoint, the payoff is unclear. The brain cannot anticipate a completion reward because completion has no visible form. Without a clear payoff signal, the activation cost wins and initiation stalls.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What is endpoint definition for ADHD task initiation?</summary>
+        <div class="faq-answer">
+          <p>Endpoint definition is explicitly deciding what done looks like before beginning a task. It converts an open-ended task into a bounded one by defining a specific, observable condition that signals completion. For ADHD brains, this definition must be made before starting — not during or after. A defined endpoint gives the brain a concrete reward target to initiate toward, replacing the absent payoff that was blocking activation.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why do people with ADHD struggle with open-ended tasks?</summary>
+        <div class="faq-answer">
+          <p>Open-ended tasks have no natural finish line. For neurotypical brains, the absence of a defined endpoint is manageable because internal stopping rules can be generated on the fly. For ADHD brains, impaired prefrontal cortex function makes generating stopping rules internally unreliable, making open-ended tasks both harder to start — no visible payoff — and harder to stop — no clear signal to disengage. Defining done before starting addresses the initiation barrier specifically.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do you define done for open-ended ADHD tasks?</summary>
+        <div class="faq-answer">
+          <p>Use one of three methods: time boxing (the task ends in a set number of minutes regardless of state), output specification (the task ends when a specific deliverable exists), or condition specification (the task ends when a specific observable condition is met). The definition must be specific enough that you could answer yes or no to "am I done?" without interpretation.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Is perfectionism related to unclear done in ADHD?</summary>
+        <div class="faq-answer">
+          <p>Yes. When done is undefined, the implicit standard becomes perfection — the task is never done until it is the best it could possibly be. Since perfect is never achieved, starting means committing to an infinite loop with no exit. Defining a good-enough endpoint before starting breaks this cycle by replacing perfection with an achievable completion condition — not lowering standards, but making initiation possible.</p>
+        </div>
+      </details>
+
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-block">
+      <h2>When done is undefined, <em>we define it.</em></h2>
+      <p>The Initiation App identifies no clear done as your active blocker and helps you define a specific, achievable endpoint before you start — so your brain has a finish line to aim toward.</p>
+      <a href="https://apps.apple.com/us/app/the-initiation-app/id6767593584" class="cta-btn">Download free on iOS</a>
+      <p class="cta-note">Free tier: 1 session/day · Paid: $6.99/month · iOS only</p>
+    </div>
+
+    <!-- Related pages -->
+    <nav style="margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--surface-mid);">
+      <p style="font-size: 13px; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; margin-bottom: 16px;">Related</p>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <a href="/adhd-task-paralysis-unclear-start" style="font-size: 15px; color: var(--text-secondary);">← Previous Blocker: ADHD and No Clear Starting Point →</a>
+        <a href="/adhd-task-paralysis" style="font-size: 15px; color: var(--text-secondary);">All 6 ADHD Task Blockers Explained →</a>
+        <a href="/adhd-fear-of-failure-tasks" style="font-size: 15px; color: var(--text-secondary);">ADHD and Fear of Failure →</a>
+      </div>
+    </nav>
+
+    <!-- Author bio -->
+    <div class="author-bio">
+      <div class="avatar">J</div>
+      <p class="bio-text"><strong>Jarrett Siwiec</strong> is the founder of The Initiation App, built in Gypsum, Colorado. He has ADHD and built the app after years of firsthand task initiation struggles and frustration with tools that addressed the wrong problem.</p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2026 The Initiation App · Gypsum, Colorado, United States</div>
+    <div style="margin-top: 10px;">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+
+</body>
+</html>
