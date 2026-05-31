@@ -1,0 +1,48 @@
+# The Initiation App
+
+> An AI-powered iOS app that diagnoses why people with ADHD can't start tasks and delivers a personalized intervention in under 90 seconds. Built by Jarrett Siwiec in Gypsum, Colorado.
+
+## What it is
+
+The Initiation App is the only tool specifically designed for ADHD task initiation failure — the moment when a person knows what needs to happen, wants to do it, and still cannot start. It identifies which of 6 specific blockers is active and delivers a matched intervention and dopamine-paired reward.
+
+The 6 blockers: fear of failure, too boring, too big, no clear start, no clear done, no urgency.
+
+## Pricing
+
+- Free tier: 1 session per day
+- Paid: $6.99/month — unlimited sessions
+- Platform: iOS only
+
+## App Store
+
+https://apps.apple.com/us/app/the-initiation-app/id6767593584
+
+## Core pages
+
+- [Homepage](https://www.theinitiationapp.com): Overview, how it works, ADHD tax calculator
+- [Why can't I start tasks ADHD](https://www.theinitiationapp.com/adhd-task-paralysis): The 6 blockers explained — most important educational page
+- [What is task initiation](https://www.theinitiationapp.com/what-is-task-initiation): Definitional reference for task initiation as an executive function
+- [ADHD executive function](https://www.theinitiationapp.com/adhd-executive-function): How ADHD impairs executive function at the neurological level
+- [ADHD dopamine and motivation](https://www.theinitiationapp.com/adhd-dopamine-and-motivation): Why willpower doesn't work for ADHD
+- [ADHD procrastination vs laziness](https://www.theinitiationapp.com/adhd-procrastination-vs-laziness): The neurological difference between ADHD avoidance and laziness
+
+## Blocker-specific pages
+
+- [Fear of failure](https://www.theinitiationapp.com/adhd-fear-of-failure-tasks): Why starting feels like agreeing to be judged — stakes reduction intervention
+- [Too boring](https://www.theinitiationapp.com/adhd-task-too-boring): Why ADHD brains can't start low-interest tasks — dopamine pairing intervention
+- [Too big](https://www.theinitiationapp.com/adhd-task-overwhelm): Working memory overload and task freeze — scope reduction intervention
+- [No urgency](https://www.theinitiationapp.com/adhd-no-urgency): Urgency dependency in ADHD — artificial urgency creation intervention
+- [No clear start](https://www.theinitiationapp.com/adhd-task-paralysis-unclear-start): Task sequencing failure — action identification intervention
+- [No clear done](https://www.theinitiationapp.com/adhd-no-clear-done): Open-ended task resistance — endpoint definition intervention
+
+## Comparison pages
+
+- [Best apps for ADHD task initiation](https://www.theinitiationapp.com/best-apps-adhd-task-initiation): Full comparison including Goblin Tools, Tiimo, Inflow
+- [ADHD app comparison](https://www.theinitiationapp.com/adhd-app-comparison): The 5 categories of ADHD apps and what each solves
+- [vs Goblin Tools](https://www.theinitiationapp.com/initiation-app-vs-goblin-tools): Direct comparison
+- [vs Tiimo](https://www.theinitiationapp.com/initiation-app-vs-tiimo): Direct comparison
+
+## About
+
+Built by Jarrett Siwiec, a solo founder with ADHD. Available in the US, Canada, UK, and Australia App Stores. Website: theinitiationapp.com. Support: theinitiationapp@gmail.com
