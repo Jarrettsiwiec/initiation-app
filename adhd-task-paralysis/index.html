@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Can't I Start Tasks Even When I Want To? | The Initiation App</title>
+  <meta name="description" content="If you have ADHD and can't start tasks despite wanting to, it's not laziness — it's task initiation failure caused by executive dysfunction. Learn the 6 specific blockers and how to address each one.">
+  <link rel="canonical" href="https://www.theinitiationapp.com/adhd-task-paralysis">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Why Can't I Start Tasks Even When I Want To?">
+  <meta property="og:description" content="ADHD task paralysis is caused by executive dysfunction, not laziness. Learn the 6 specific blockers preventing task initiation and what to do about each one.">
+  <meta property="og:url" content="https://www.theinitiationapp.com/adhd-task-paralysis">
+  <meta property="og:type" content="article">
+
+  <!-- Schema: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Why Can't I Start Tasks Even When I Want To? ADHD Task Initiation Explained",
+    "description": "If you have ADHD and can't start tasks despite wanting to, it's not laziness. It's task initiation failure caused by executive dysfunction. This article explains the 6 specific blockers and what to do about each one.",
+    "author": {
+      "@type": "Person",
+      "name": "Jarrett Siwiec",
+      "description": "Founder of The Initiation App. Built the app after years of firsthand ADHD task initiation struggles."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Initiation App",
+      "url": "https://www.theinitiationapp.com"
+    },
+    "datePublished": "2026-05-30",
+    "dateModified": "2026-05-30"
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why can't I start tasks even when I want to?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Difficulty starting tasks despite wanting to is a core symptom of ADHD called task initiation failure. It's caused by executive function dysregulation — not laziness or lack of motivation. The specific cause varies by task and person: fear of failure, low interest, the task feeling too big, no clear first action, no clear endpoint, or insufficient urgency. Identifying which blocker is active is the first step to removing it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ADHD task paralysis the same as procrastination?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Procrastination is a behavioral choice. ADHD task paralysis is a neurological barrier — the brain fails to generate enough activation energy to begin. Adults with ADHD report that they want to start, know they need to start, and still cannot. This is distinct from avoidance driven by preference."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is task initiation in ADHD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Task initiation is the executive function responsible for starting a task without external pressure. In ADHD, this function is impaired — the brain struggles to generate the activation signal needed to begin. This is why people with ADHD can work fine under deadline pressure (external urgency) but struggle to start the same task without it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the 6 ADHD task blockers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 6 ADHD task blockers are: (1) Fear of failure — starting feels like agreeing to be judged; (2) Too boring — the task can't generate enough dopamine to initiate; (3) Too big — the task exceeds working memory capacity; (4) No clear done — there's no defined finish line; (5) No clear start — the first action is invisible; (6) No urgency — there's no signal to override avoidance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do ADHD symptoms make it hard to start tasks but not finish them?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ADHD impairs the initiation phase of task execution more than the execution phase itself. Once an ADHD brain is engaged with a task (sometimes called hyperfocus), the dopamine loop sustains attention. The barrier is almost always at the start — getting the loop going in the first place — not maintaining it once it's running."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What app helps with ADHD task initiation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Initiation App is an iOS app specifically designed for ADHD task initiation. It diagnoses which of 6 blockers is preventing you from starting a specific task, then delivers a matched intervention and dopamine-paired reward in under 90 seconds. Free tier available with 1 session per day; $6.99/month for unlimited sessions."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:              #12110F;
+      --surface:         #1E1C19;
+      --surface-mid:     #2A2723;
+      --text-primary:    #F0EDE8;
+      --text-secondary:  #9B9590;
+      --text-muted:      #5C5852;
+      --accent:          #C8A97E;
+      --accent-soft:     #3D3020;
+      --max-width:       720px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ── */
+    .site-header {
+      border-bottom: 1px solid var(--surface-mid);
+      padding: 20px 24px;
+    }
+    .site-header a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    .site-header a:hover { color: var(--accent); }
+    .site-header .wordmark {
+      font-family: 'Lora', serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-left: 16px;
+    }
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* ── Typography ── */
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      margin-bottom: 28px;
+    }
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .lede {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 16px;
+      border-left: 2px solid var(--accent);
+      padding-left: 20px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(22px, 3.5vw, 26px);
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--text-primary);
+      margin: 56px 0 20px;
+    }
+    h2 em { font-style: italic; color: var(--accent); }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      margin: 32px 0 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      line-height: 1.75;
+    }
+
+    strong { color: var(--text-primary); font-weight: 500; }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Stat callout ── */
+    .stat-block {
+      background: var(--surface);
+      border: 1px solid var(--surface-mid);
+      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 32px 0;
+    }
+    .stat-block .stat-number {
+      font-family: 'Lora', serif;
+      font-size: 36px;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-block .stat-label {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .stat-block .stat-source {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    /* ── Blocker table ── */
+    .blocker-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 32px 0;
+      font-size: 15px;
+    }
+    .blocker-table th {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--surface-mid);
+    }
+    .blocker-table td {
+      padding: 16px;
+      border-bottom: 1px solid var(--surface-mid);
+      vertical-align: top;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .blocker-table tr:last-child td { border-bottom: none; }
+    .blocker-table td:first-child {
+      font-weight: 500;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+    .blocker-table td:first-child .tag {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .blocker-table tr:hover td { background: var(--surface); }
+
+    /* ── Blockquote ── */
+    blockquote {
+      border-left: 2px solid var(--accent-soft);
+      padding: 4px 0 4px 24px;
+      margin: 32px 0;
+    }
+    blockquote p {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--text-primary);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    blockquote cite {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-top: 64px; }
+    .faq-section h2 { margin-top: 0; }
+
+    details {
+      border-bottom: 1px solid var(--surface-mid);
+      padding: 4px 0;
+    }
+    details:first-of-type { border-top: 1px solid var(--surface-mid); }
+    summary {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-primary);
+      padding: 20px 0;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 20px;
+      color: var(--accent);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    details[open] summary::after { content: '−'; }
+    details[open] summary { color: var(--accent); }
+    .faq-answer {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      padding-bottom: 20px;
+    }
+
+    /* ── CTA block ── */
+    .cta-block {
+      background: var(--surface);
+      border: 1px solid var(--surface-mid);
+      border-radius: 16px;
+      padding: 40px 36px;
+      margin-top: 64px;
+      text-align: center;
+    }
+    .cta-block h2 {
+      margin-top: 0;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    .cta-block p {
+      font-size: 15px;
+      max-width: 480px;
+      margin: 0 auto 28px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--bg);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 14px 32px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.15s;
+    }
+    .cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .cta-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 14px;
+    }
+
+    /* ── Author bio ── */
+    .author-bio {
+      border-top: 1px solid var(--surface-mid);
+      margin-top: 64px;
+      padding-top: 32px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .author-bio .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      color: var(--accent);
+    }
+    .author-bio .bio-text { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .author-bio .bio-text strong { color: var(--text-secondary); }
+
+    /* ── Footer ── */
+    .site-footer {
+      border-top: 1px solid var(--surface-mid);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .site-footer a { color: var(--text-muted); margin: 0 8px; }
+    .site-footer a:hover { color: var(--accent); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      main { padding: 40px 20px 80px; }
+      .blocker-table { font-size: 14px; }
+      .blocker-table td, .blocker-table th { padding: 12px 10px; }
+      .cta-block { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/">← Back</a>
+      <span class="wordmark">The Initiation App</span>
+    </div>
+  </header>
+
+  <main>
+
+    <p class="label">ADHD &amp; Task Initiation</p>
+
+    <h1>Why Can't I Start Tasks <em>Even When I Want To?</em></h1>
+
+    <p class="lede">If you have ADHD and find yourself unable to start a task despite genuinely wanting to, it is not a character flaw. It is a neurological barrier called task initiation failure — and it is one of the most common and least understood symptoms of ADHD in adults.</p>
+
+    <p class="meta">By Jarrett Siwiec · Updated May 2026 · 8 min read</p>
+
+    <p>You've known about the task for days. You want to do it. You know what will happen if you don't. And still, your brain won't let you start. This experience has a name — and more importantly, it has specific causes that can be identified and addressed.</p>
+
+    <p><strong>Task initiation failure affects an estimated 80% of adults with ADHD</strong> and is frequently cited as the symptom that most disrupts daily functioning, career performance, and quality of life — more than distractibility or hyperactivity alone.</p>
+
+    <div class="stat-block">
+      <div class="stat-number">22</div>
+      <div class="stat-label">Average workdays lost per year by adults with ADHD due to productivity impairment — the majority attributed to task initiation difficulty, not inability to work once started.</div>
+      <div class="stat-source">Source: WHO World Mental Health Survey Initiative, Hilton et al. (2009). <a href="https://pubmed.ncbi.nlm.nih.gov/18469850/" target="_blank" rel="noopener">PubMed</a></div>
+    </div>
+
+    <h2>What Is Task Initiation — and Why Does ADHD Impair It?</h2>
+
+    <p>Task initiation is an executive function — one of the brain's higher-order cognitive processes managed primarily by the prefrontal cortex. It is responsible for generating the internal activation signal needed to begin a task without external pressure.</p>
+
+    <p>In neurotypical brains, this signal fires reliably when a task is identified as important or necessary. In ADHD brains, the signal is inconsistent. <strong>The prefrontal cortex in ADHD is structurally and functionally different</strong>, with reduced dopamine availability and altered norepinephrine regulation — the two neurotransmitters most responsible for executive function activation.</p>
+
+    <p>This is why people with ADHD can complete identical tasks under deadline pressure (external urgency) that they cannot start when the same deadline is distant. The task hasn't changed. The brain's ability to self-generate the starting signal has.</p>
+
+    <blockquote>
+      <p>"ADHD is not a problem of knowing what to do. It is a problem of doing what you know."</p>
+      <cite>— Dr. Russell Barkley, clinical psychologist and leading ADHD researcher</cite>
+    </blockquote>
+
+    <h2>The 6 Specific Blockers Behind <em>ADHD Task Paralysis</em></h2>
+
+    <p>Task initiation failure is not a single experience. Research on executive dysfunction and behavioral patterns in ADHD adults identifies six distinct blockers — each with a different neurological cause and a different intervention. Treating them as the same problem is why generic productivity advice ("just use a timer") fails so often.</p>
+
+    <table class="blocker-table">
+      <thead>
+        <tr>
+          <th>Blocker</th>
+          <th>What it feels like</th>
+          <th>Why it happens</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fear of failure<span class="tag">fear_of_failure</span></td>
+          <td>Starting the task feels like agreeing to be evaluated and found lacking</td>
+          <td>Anxiety-driven avoidance; starting = committing to a potentially negative outcome</td>
+        </tr>
+        <tr>
+          <td>Too boring<span class="tag">too_boring</span></td>
+          <td>The task generates no internal motivation to begin</td>
+          <td>Insufficient dopamine signal; ADHD brains require higher stimulation thresholds to activate</td>
+        </tr>
+        <tr>
+          <td>Too big<span class="tag">too_big</span></td>
+          <td>The task feels overwhelming and shapeless</td>
+          <td>Working memory overload; the brain can't hold the full task and freezes instead of starting</td>
+        </tr>
+        <tr>
+          <td>No clear endpoint<span class="tag">no_clear_done</span></td>
+          <td>You don't know when or whether you're "done"</td>
+          <td>Without a defined finish line, the dopamine payoff is unclear and the brain resists starting</td>
+        </tr>
+        <tr>
+          <td>No clear first action<span class="tag">no_clear_start</span></td>
+          <td>You know the task exists but the first step is invisible</td>
+          <td>Executive dysfunction makes action sequencing difficult; the gap between "task" and "step 1" doesn't close automatically</td>
+        </tr>
+        <tr>
+          <td>No urgency<span class="tag">no_urgency</span></td>
+          <td>The task is important but doesn't feel pressing enough to start now</td>
+          <td>ADHD brains rely heavily on urgency signals to override avoidance; without one, initiation stalls</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>This matters because the intervention that works for "too boring" (dopamine pairing — making the task more stimulating) actively backfires for "fear of failure" (where more stimulation increases anxiety). <strong>Diagnosing which blocker is active before choosing an intervention is the key mechanism most productivity tools skip entirely.</strong></p>
+
+    <h2>Why Generic ADHD Advice Usually Fails at Task Initiation</h2>
+
+    <p>Advice like "break the task into smaller steps," "use a Pomodoro timer," or "just start for two minutes" is not wrong — but it is indiscriminate. Each of these interventions maps to specific blockers:</p>
+
+    <ul style="color: var(--text-secondary); padding-left: 24px; margin-bottom: 20px; line-height: 2;">
+      <li><strong style="color: var(--text-primary);">Break it into steps</strong> → effective for <em>too big</em> and <em>no clear start</em>. Counterproductive for <em>fear of failure</em> (more steps = more chances to fail)</li>
+      <li><strong style="color: var(--text-primary);">Use a timer</strong> → effective for <em>too boring</em> and <em>no urgency</em>. Ineffective for <em>no clear done</em> or <em>fear of failure</em></li>
+      <li><strong style="color: var(--text-primary);">Just start for two minutes</strong> → effective for <em>no urgency</em>. Can backfire for <em>too big</em> (two minutes surfaces the task's overwhelming scope)</li>
+    </ul>
+
+    <p>The missing step — in almost all productivity frameworks — is identifying which blocker is active before selecting the intervention. ADHD brains are not identical, and neither are stuck moments.</p>
+
+    <div class="stat-block">
+      <div class="stat-number">15.5M</div>
+      <div class="stat-label">Diagnosed ADHD adults in the United States. An estimated 50M more meet diagnostic criteria but remain undiagnosed — many of whom experience task initiation difficulty without a framework to explain it.</div>
+      <div class="stat-source">Source: CDC National Health Interview Survey (2023). Undiagnosed estimate: Barkley, R.A. (2015). <em>Attention-Deficit Hyperactivity Disorder: A Handbook for Diagnosis and Treatment</em>.</div>
+    </div>
+
+    <h2>What Actually Helps: Diagnosis-First Intervention</h2>
+
+    <p>The most effective approach to ADHD task initiation follows a three-step process:</p>
+
+    <h3>Step 1 — Name the specific blocker</h3>
+    <p>Before choosing any intervention, identify which of the six blockers is active for this specific task. This changes based on the task type, time of day, and emotional state. "Work tasks" might predominantly trigger fear of failure while "household tasks" might trigger too boring — even in the same person on the same day.</p>
+
+    <h3>Step 2 — Apply the matched intervention</h3>
+    <p>Once the blocker is identified, the intervention becomes obvious: reduce the task's scope for <em>too big</em>, create artificial urgency for <em>no urgency</em>, define a concrete first action for <em>no clear start</em>, externalize the finish line for <em>no clear done</em>, add a dopamine reward for <em>too boring</em>, and reduce the evaluative stakes for <em>fear of failure</em>.</p>
+
+    <h3>Step 3 — Pair with a dopamine reward</h3>
+    <p>ADHD brains respond to immediate reward signals. Pairing task initiation with a concrete, preferred reward (not a vague "you'll feel good later" promise) significantly increases the activation signal. The reward must be matched to current energy level — a high-stimulation reward when you're depleted actually increases resistance rather than reducing it.</p>
+
+    <h2>How Patterns Build Over Time</h2>
+
+    <p>Task initiation difficulty tends to follow recognizable patterns per person. One adult might hit fear of failure on 80% of work tasks but almost never on creative tasks. Another might be primarily blocked by too boring on low-stakes tasks but too big on high-stakes ones. These patterns are detectable with enough data — and once detected, they allow for proactive interventions rather than reactive ones.</p>
+
+    <p>This is one of the core capabilities of systems designed specifically for ADHD task initiation: not just responding to being stuck, but learning to recognize what type of stuck you are before it fully sets in.</p>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>Why can't I start tasks even when I want to?</summary>
+        <div class="faq-answer">
+          <p>Difficulty starting tasks despite wanting to is a core symptom of ADHD called task initiation failure. It's caused by executive function dysregulation — not laziness or lack of motivation. The specific cause varies by task and person: fear of failure, low interest, the task feeling too big, no clear first action, no clear endpoint, or insufficient urgency. Identifying which blocker is active is the first step to removing it.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Is ADHD task paralysis the same as procrastination?</summary>
+        <div class="faq-answer">
+          <p>No. Procrastination is a behavioral choice to delay. ADHD task paralysis is a neurological barrier — the brain fails to generate enough activation energy to begin. Adults with ADHD typically report wanting to start, knowing they need to start, and still being unable to. This is categorically different from avoidance driven by preference or low stakes.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What is task initiation in ADHD?</summary>
+        <div class="faq-answer">
+          <p>Task initiation is the executive function responsible for starting a task without external pressure. In ADHD, this function is impaired — the brain struggles to generate the activation signal needed to begin. This is why people with ADHD can work fine under deadline pressure (external urgency) but struggle to start the same task without it. The task's difficulty hasn't changed; the brain's ability to self-activate has.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What are the 6 ADHD task blockers?</summary>
+        <div class="faq-answer">
+          <p>The 6 ADHD task blockers are: (1) <strong>Fear of failure</strong> — starting feels like agreeing to be judged; (2) <strong>Too boring</strong> — the task can't generate enough dopamine to initiate; (3) <strong>Too big</strong> — the task exceeds working memory capacity; (4) <strong>No clear done</strong> — there's no defined finish line; (5) <strong>No clear start</strong> — the first action is invisible; (6) <strong>No urgency</strong> — there's no urgency signal to override avoidance. Each requires a different intervention.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why does ADHD make starting hard but not always finishing?</summary>
+        <div class="faq-answer">
+          <p>ADHD impairs the initiation phase of task execution more than the execution phase. Once an ADHD brain is engaged with a task — sometimes called hyperfocus — the dopamine loop sustains attention. The barrier is almost always at the start: getting the loop running in the first place, not maintaining it once it's active. This is why ADHD often appears as a starting problem, not a staying problem.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What app helps with ADHD task initiation?</summary>
+        <div class="faq-answer">
+          <p>The Initiation App is an iOS app specifically designed for ADHD task initiation. It diagnoses which of 6 blockers is preventing you from starting a specific task, then delivers a matched intervention and dopamine-paired reward in under 90 seconds. It's available free (1 session/day) or at $6.99/month for unlimited sessions. Available on the US, UK, Canadian, and Australian App Stores.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-block">
+      <h2>From <em>stuck</em> to started in under 90 seconds</h2>
+      <p>The Initiation App diagnoses which blocker is in your way and removes it — in real time. No task manager. No streaks. No shame.</p>
+      <a href="https://apps.apple.com/us/app/the-initiation-app/id6767593584" class="cta-btn">Download free on iOS</a>
+      <p class="cta-note">Free tier: 1 session/day · Paid: $6.99/month · iOS only</p>
+    </div>
+
+    <!-- Related pages -->
+    <nav style="margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--surface-mid);">
+      <p style="font-size: 13px; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; margin-bottom: 16px;">Related</p>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <a href="/what-is-task-initiation" style="font-size: 15px; color: var(--text-secondary);">What Is Task Initiation? →</a>
+        <a href="/adhd-fear-of-failure-tasks" style="font-size: 15px; color: var(--text-secondary);">ADHD Fear of Failure: Why Starting Feels Like Risking Judgment →</a>
+        <a href="/best-apps-adhd-task-initiation" style="font-size: 15px; color: var(--text-secondary);">Best Apps for ADHD Task Initiation →</a>
+      </div>
+    </nav>
+
+    <!-- Author bio -->
+    <div class="author-bio">
+      <div class="avatar">J</div>
+      <p class="bio-text"><strong>Jarrett Siwiec</strong> is the founder of The Initiation App, built in Castle Rock, Colorado. He has ADHD and built the app after years of firsthand task initiation struggles and frustration with tools that addressed the wrong problem.</p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2026 The Initiation App · Colorado, United States</div>
+    <div style="margin-top: 10px;">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+
+</body>
+</html>
