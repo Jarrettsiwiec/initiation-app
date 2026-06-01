@@ -310,7 +310,11 @@
       border: 1px solid var(--surface-mid);
       border-radius: 12px;
       padding: 18px 20px;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.15s;
     }
+    .blocker-card:hover { border-color: var(--accent); }
     .blocker-card .bc-name {
       font-size: 14px;
       font-weight: 500;
@@ -472,30 +476,30 @@
       <p class="section-body">Generic productivity advice fails because it treats all stuck moments the same. The blocker that stops you from starting matters more than the task itself.</p>
 
       <div class="blockers-grid">
-        <div class="blocker-card">
+        <a href="/adhd-fear-of-failure-tasks" class="blocker-card">
           <div class="bc-name">Fear of failure</div>
           <div class="bc-fix">Stakes reduction →</div>
-        </div>
-        <div class="blocker-card">
+        </a>
+        <a href="/adhd-task-too-boring" class="blocker-card">
           <div class="bc-name">Too boring</div>
           <div class="bc-fix">Dopamine pairing →</div>
-        </div>
-        <div class="blocker-card">
+        </a>
+        <a href="/adhd-task-overwhelm" class="blocker-card">
           <div class="bc-name">Too big</div>
           <div class="bc-fix">Scope reduction →</div>
-        </div>
-        <div class="blocker-card">
+        </a>
+        <a href="/adhd-task-paralysis-unclear-start" class="blocker-card">
           <div class="bc-name">No clear start</div>
           <div class="bc-fix">Action identification →</div>
-        </div>
-        <div class="blocker-card">
+        </a>
+        <a href="/adhd-no-clear-done" class="blocker-card">
           <div class="bc-name">No clear done</div>
           <div class="bc-fix">Endpoint definition →</div>
-        </div>
-        <div class="blocker-card">
+        </a>
+        <a href="/adhd-no-urgency" class="blocker-card">
           <div class="bc-name">No urgency</div>
           <div class="bc-fix">Urgency creation →</div>
-        </div>
+        </a>
       </div>
     </section>
 
