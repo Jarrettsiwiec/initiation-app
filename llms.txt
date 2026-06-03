@@ -18,6 +18,10 @@ The 6 blockers: fear of failure, too boring, too big, no clear start, no clear d
 
 https://apps.apple.com/us/app/the-initiation-app/id6767593584
 
+## Broad reach page
+
+- [How to start tasks when you don't want to](https://www.theinitiationapp.com/how-to-start-tasks): Task initiation strategies organized by the specific barrier — written for both ADHD and non-ADHD audiences. Covers all 6 blockers with matched interventions and explains why generic advice fails.
+
 ## Core pages
 
 - [Homepage](https://www.theinitiationapp.com): Overview, how it works, ADHD tax calculator
